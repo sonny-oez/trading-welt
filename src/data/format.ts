@@ -35,6 +35,38 @@ export function formatFunding(annPct: number): string {
   return formatPct(annPct, digits);
 }
 
+export function formatMoney(value: number, withUnit = true): string {
+  const body = new Intl.NumberFormat('de-DE', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(value);
+  return withUnit ? `${body} USD` : body;
+}
+
+export function formatSignedMoney(value: number): string {
+  const body = new Intl.NumberFormat('de-DE', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+    signDisplay: 'exceptZero',
+  }).format(value);
+  return `${body} USD`;
+}
+
+export function formatBerlinStamp(iso: string): string {
+  const ms = Date.parse(iso);
+  if (!Number.isFinite(ms)) return '—';
+  return new Intl.DateTimeFormat('de-DE', {
+    timeZone: 'Europe/Berlin',
+    day: '2-digit',
+    month: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hourCycle: 'h23',
+    timeZoneName: 'short',
+  }).format(ms);
+}
+
 export function formatUsd(value: number): string {
   const abs = Math.abs(value);
   if (abs >= 10_000) {

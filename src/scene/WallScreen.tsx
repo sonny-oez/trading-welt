@@ -70,7 +70,7 @@ function draw(
   ctx.textAlign = 'left';
   ctx.fillStyle = 'rgba(180, 210, 230, 0.55)';
   ctx.font = '500 18px Outfit, sans-serif';
-  ctx.fillText('Nur Recherche  ·  kein Handel', 36, h - 36);
+  ctx.fillText('Virtuelle Demo  ·  keine echten Orders', 36, h - 36);
 }
 
 export function WallScreen() {

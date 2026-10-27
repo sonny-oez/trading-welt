@@ -1,3 +1,4 @@
+import { DEMO_COPY } from '../data/demo';
 import { useDesk } from '../data/store';
 import { STATIONS } from '../scene/layout';
 
@@ -6,7 +7,8 @@ export function BotCards() {
   const colors = new Map(STATIONS.map((station) => [station.station, station.color]));
   return (
     <div className="team">
-      <p className="pane-kicker">{desk.headline}</p>
+      <p className="virtual-banner">{DEMO_COPY.virtual}</p>
+      <p className="demo-note">{desk.headline}</p>
       <ul>
         {desk.bots.map((bot) => (
           <li key={bot.station}>

@@ -1,10 +1,11 @@
+import { DEMO_COPY } from '../data/demo';
 import { useDesk } from '../data/store';
 import type { SafetyFlags } from '../data/types';
 
 function rows(safety: SafetyFlags) {
   return [
     {
-      label: safety.tradingEnabled ? 'Handel an' : 'Handel aus',
+      label: safety.tradingEnabled ? 'Echter Handel an' : 'Kein echter Handel',
       tone: safety.tradingEnabled ? 'bad' : 'ok',
     },
     {
@@ -12,11 +13,11 @@ function rows(safety: SafetyFlags) {
       tone: safety.riskLimitsSet ? 'ok' : 'warn',
     },
     {
-      label: safety.apiWalletConnected ? 'API-Wallet verbunden' : 'Kein API-Wallet',
+      label: safety.apiWalletConnected ? 'Echtes Wallet verbunden' : 'Kein echtes Wallet verbunden',
       tone: safety.apiWalletConnected ? 'bad' : 'ok',
     },
     {
-      label: safety.openOrders ? 'Orders vorhanden' : 'Keine Orders',
+      label: safety.openOrders ? 'Echte Orders vorhanden' : 'Keine echten Orders',
       tone: safety.openOrders ? 'bad' : 'ok',
     },
   ];
@@ -37,10 +38,9 @@ export function SafetyPanel() {
         <span className={warn ? 'lamp amber on' : 'lamp amber'} />
         <span className={safe ? 'lamp green on' : 'lamp green'} />
       </div>
-      <h2>Kein Handel</h2>
-      <p className="safety-lead">
-        Dieses Desk beobachtet nur. Es gibt kein Konto in dieser App, und es wird nichts gesendet.
-      </p>
+      <p className="virtual-banner">{DEMO_COPY.virtual}</p>
+      <h2>Demo-Modus</h2>
+      <p className="safety-lead">{desk.headline}</p>
       <ul>
         {rows(safety).map((row) => (
           <li key={row.label} className={row.tone}>
@@ -49,7 +49,9 @@ export function SafetyPanel() {
           </li>
         ))}
       </ul>
-      <p className="fine">Es werden nur öffentliche Marktdaten gelesen. Keine Schlüssel, kein Wallet, keine Orders.</p>
+      <p className="fine">
+        Öffentliche Marktdaten und eine virtuelle Demo. Keine Schlüssel, keine echten Orders.
+      </p>
     </div>
   );
 }
