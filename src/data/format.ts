@@ -103,6 +103,21 @@ export function formatBerlinHour(ts: number): string {
   }).format(ts);
 }
 
+export function formatBerlinMillis(ms: number): string {
+  if (!Number.isFinite(ms)) return '—';
+  const parts = new Intl.DateTimeFormat('de-DE', {
+    timeZone: 'Europe/Berlin',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hourCycle: 'h23',
+    fractionalSecondDigits: 3,
+  }).formatToParts(ms);
+  const pick = (type: Intl.DateTimeFormatPartTypes) => parts.find((part) => part.type === type)?.value ?? '';
+  const fraction = pick('fractionalSecond').padEnd(3, '0').slice(0, 3);
+  return `${pick('hour')}:${pick('minute')}:${pick('second')}.${fraction}`;
+}
+
 export function formatBerlinShort(ts: number): string {
   return new Intl.DateTimeFormat('de-DE', {
     timeZone: 'Europe/Berlin',

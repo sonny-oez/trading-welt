@@ -3,6 +3,7 @@ import { refreshNow } from '../data/engine';
 import { useMarket } from '../data/store';
 import { COINS } from '../data/types';
 import { useBerlinAtmosphere } from '../hooks';
+import { LiveMark } from './LiveStatus';
 
 function QuoteRun({ copy }: { copy: string }) {
   const assets = useMarket((state) => state.assets);
@@ -64,6 +65,7 @@ export function TopBar() {
         </div>
       </div>
       <p className="stand">
+        <LiveMark />
         <span>Stand {updatedAt ? formatBerlin(updatedAt) : '—'}</span>
         <span className="stand-note">{notice ?? 'Nur Lesen'}</span>
       </p>
