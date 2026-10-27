@@ -42,8 +42,19 @@ Die App lädt zur Laufzeit
 mit Cache-Busting, etwa alle 60 Sekunden. Fehlt die Datei, erscheint „Demo startet gleich / noch keine Trades“.
 Ist `updated_utc` älter als 30 Minuten, erscheint „Simulation pausiert“.
 
+## Live
+
+Dieselbe Demo liest zusätzlich `public/demo/live.json` von
+
+`https://raw.githubusercontent.com/sonny-oez/trading-welt/main/public/demo/live.json`
+
+(`{"schema":1,"ws_url":"wss://…/live"}` oder `ws_url: null`).
+Ein `?live=wss://…` in der Adresse überschreibt die Datei. Erlaubt sind `wss://` und, nur zur Entwicklung, `ws://localhost`.
+Der Socket liefert den Kontostand und Ereignisse mit Zeitstempeln in Millisekunden. Solange er fehlt oder abbricht, bleibt `state.json` der letzte Stand.
+Der Service Worker lädt `live.json` nur vom Netz und fasst den WebSocket nicht an.
+
 ## Daten
 
 Der Browser liest nur `POST https://api.hyperliquid.xyz/info`, optional `wss://api.hyperliquid.xyz/ws`,
-und die öffentliche Demo-Datei oben. Es gibt keinen Aufruf von `/exchange`.
+die öffentlichen Demo-Dateien und den Live-Socket aus `live.json`. Es gibt keinen Aufruf von `/exchange`.
 Antworten der API werden nicht als frische Daten im Service Worker gecacht.

@@ -120,7 +120,7 @@ button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
 .tick span, .tick em { font-family: "IBM Plex Mono", ui-monospace, monospace; font-style: normal; font-size: 12px; }
 .up { color: var(--up); }
 .down { color: var(--down); }
-.stand { margin: 0; padding-bottom: 8px; color: var(--muted); font-size: 12px; }
+.stand { margin: 0; padding-bottom: 8px; color: var(--muted); font-size: 12px; flex-wrap: wrap; }
 .stand-note { opacity: 0.85; }
 
 .hint {
@@ -421,6 +421,61 @@ button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
   background: rgba(0, 0, 0, 0.22);
   border: 1px solid var(--line);
 }
+.live-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+.live-mark i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #8b93a7;
+  display: block;
+  flex: none;
+}
+.live-mark.on { color: var(--up); }
+.live-mark.on i { background: var(--up); box-shadow: 0 0 8px var(--up); animation: pulse 1.4s ease-out infinite; }
+.live-mark.off { color: #9aa3b5; }
+.demo-delay {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+}
+.live-feed { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.live-feed li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+  align-items: baseline;
+  padding: 6px 8px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 12px;
+}
+.live-feed time {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11px;
+  color: var(--muted);
+}
+.live-feed b { font-size: 12px; }
+.kind {
+  font-style: normal;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+.kind-open, .kind-close { color: var(--up); }
+.kind-reject, .kind-stop, .kind-risk { color: var(--down); }
+.kind-skeptic { color: var(--amber); }
 
 .skel {
   height: 12px;
@@ -505,5 +560,5 @@ button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .ticker-track, .badge.live .dot, .skel { animation: none; }
+  .ticker-track, .badge.live .dot, .live-mark.on i, .skel { animation: none; }
 }

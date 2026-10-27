@@ -1,7 +1,10 @@
 import { useEffect, useRef } from 'react';
 import { classifyDemo, DEMO_COPY, type DemoState, type EquityPoint } from '../data/demo';
 import { useDemo } from '../data/demoFeed';
-import { formatBerlinStamp, formatMoney, formatPct, formatPx, formatSignedMoney, formatSize } from '../data/format';
+import { formatBerlinMillis, formatBerlinStamp, formatMoney, formatPct, formatPx, formatSignedMoney, formatSize } from '../data/format';
+import { KIND_LABEL, pickDisplayed, type LiveEvent } from '../data/live';
+import { useLiveEvents, useLiveLink, useLiveState } from '../data/liveFeed';
+import { DelayLine, LiveMark } from './LiveStatus';
 
 function tone(value: number): string {
   if (value > 0) return 'up';
@@ -171,6 +174,12 @@ function Positions({ state }: { state: DemoState }) {
                 <dt>Offen</dt>
                 <dd className={tone(position.unrealizedPnl)}>{formatSignedMoney(position.unrealizedPnl)}</dd>
               </div>
+              {position.margin != null ? (
+                <div>
+                  <dt>Margin</dt>
+                  <dd>{formatMoney(position.margin)}</dd>
+                </div>
+              ) : null}
               <div>
                 <dt>Seit</dt>
                 <dd>{formatBerlinStamp(position.openedUtc)}</dd>
@@ -234,14 +243,37 @@ function Trades({ state }: { state: DemoState }) {
   );
 }
 
+function EventFeed({ events }: { events: LiveEvent[] }) {
+  if (events.length === 0) return null;
+  return (
+    <section className="live-feed-wrap" aria-live="polite">
+      <h3>Ereignisse</h3>
+      <ul className="live-feed">
+        {events.map((event) => (
+          <li key={`${event.seq}-${event.kind}-${event.srcTsMs}`}>
+            <time dateTime={new Date(event.srcTsMs).toISOString()}>{formatBerlinMillis(event.srcTsMs)}</time>
+            <em className={`kind kind-${event.kind}`}>{KIND_LABEL[event.kind]}</em>
+            {event.coin ? <b>{event.coin}</b> : null}
+            <span>{event.text}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
 export function DemoPanel() {
-  const snapshot = useDemo();
+  const snapshot = pickDisplayed(useLiveState(), useDemo(), useLiveLink());
+  const events = useLiveEvents();
   const view = classifyDemo(snapshot);
   const state = snapshot.state;
 
   return (
     <div className="demo">
       <p className="virtual-banner">{DEMO_COPY.virtual}</p>
+      <LiveMark />
+      <EventFeed events={events} />
+      <DelayLine />
       {view.kind === 'loading' ? <p className="empty">{DEMO_COPY.loading}</p> : null}
       {view.kind === 'missing' ? (
         <>

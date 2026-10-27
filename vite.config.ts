@@ -82,6 +82,7 @@ export default defineConfig({
             handler: 'NetworkOnly',
           },
           {
+            // live.json and state.json. WebSocket upgrades are not fetch traffic and are not intercepted.
             urlPattern: /^https:\/\/raw\.githubusercontent\.com\/sonny-oez\/trading-welt\/main\/public\/demo\/.*/i,
             handler: 'NetworkOnly',
           },

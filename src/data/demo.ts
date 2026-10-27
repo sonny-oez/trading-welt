@@ -23,6 +23,7 @@ export interface DemoPosition {
   stop: number | null;
   takeProfit: number | null;
   unrealizedPnl: number;
+  margin: number | null;
   openedUtc: string;
 }
 
@@ -122,9 +123,11 @@ function parsePosition(item: unknown): DemoPosition | null {
   const stop = optionalNum(row.stop);
   const takeProfit = optionalNum(row.take_profit);
   const unrealizedPnl = num(row.unrealized_pnl);
+  const margin = row.margin == null || row.margin === '' ? null : num(row.margin);
   const openedMs = timeMs(row.opened_utc);
   if (!coin || !side || size == null || entry == null || mark == null || leverage == null) return null;
   if (stop === undefined || takeProfit === undefined || unrealizedPnl == null || openedMs == null) return null;
+  if (margin === undefined || (row.margin != null && row.margin !== '' && margin == null)) return null;
   return {
     coin,
     side,
@@ -135,6 +138,7 @@ function parsePosition(item: unknown): DemoPosition | null {
     stop,
     takeProfit,
     unrealizedPnl,
+    margin,
     openedUtc: text(row.opened_utc),
   };
 }
@@ -179,10 +183,7 @@ function parseCurve(item: unknown): EquityPoint | null {
   return { t: text(row.t), equity };
 }
 
-export function parseDemo(input: unknown): DemoState | null {
-  if (!input || typeof input !== 'object') return null;
-  const record = input as Record<string, unknown>;
-  if (record.schema !== 1 || record.mode !== 'paper') return null;
+export function parsePaperState(record: Record<string, unknown>): DemoState | null {
   if (!STATUSES.includes(record.status as DemoStatus)) return null;
   const updatedMs = timeMs(record.updated_utc);
   const startEquity = num(record.start_equity);
@@ -241,8 +242,15 @@ export function parseDemo(input: unknown): DemoState | null {
     positions,
     trades,
     equityCurve,
-    note: text(record.note),
+    note: text(record.label) || text(record.note),
   };
+}
+
+export function parseDemo(input: unknown): DemoState | null {
+  if (!input || typeof input !== 'object') return null;
+  const record = input as Record<string, unknown>;
+  if (record.schema !== 1 || record.mode !== 'paper') return null;
+  return parsePaperState(record);
 }
 
 export function isDemoStale(updatedMs: number, now = Date.now()): boolean {

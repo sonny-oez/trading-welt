@@ -10,28 +10,40 @@ import { BotActor } from './Bot';
 import type { Look } from './lighting';
 import { STATIONS } from './layout';
 import { Room } from './Room';
-import { executionPulseAge } from './tradePulse';
+import { stationPulseAge } from './tradePulse';
 import { WallScreen } from './WallScreen';
 
-function ExecutionPulse({ reduced }: { reduced: boolean }) {
-  const ring = useRef<THREE.Mesh>(null);
-  const home = STATIONS.find((station) => station.station === 'ausfuehrung');
+function DeskPulses({ reduced }: { reduced: boolean }) {
+  const rings = useRef<(THREE.Mesh | null)[]>([]);
   useFrame(() => {
-    const mesh = ring.current;
-    if (!mesh || !home) return;
-    const age = reduced ? -1 : executionPulseAge();
-    mesh.visible = age >= 0;
-    if (age < 0) return;
-    mesh.scale.setScalar(1 + age * 2.4);
-    const material = mesh.material;
-    if (!Array.isArray(material) && 'opacity' in material) material.opacity = 0.9 * (1 - age);
+    STATIONS.forEach((station, index) => {
+      const mesh = rings.current[index];
+      if (!mesh) return;
+      const age = reduced ? -1 : stationPulseAge(station.station);
+      mesh.visible = age >= 0;
+      if (age < 0) return;
+      mesh.scale.setScalar(1 + age * 2.4);
+      const material = mesh.material;
+      if (!Array.isArray(material) && 'opacity' in material) material.opacity = 0.9 * (1 - age);
+    });
   });
-  if (!home) return null;
   return (
-    <mesh ref={ring} position={[home.position[0], 0.05, home.position[2]]} rotation={[-Math.PI / 2, 0, 0]} visible={false}>
-      <ringGeometry args={[0.34, 0.48, 40]} />
-      <meshBasicMaterial color="#3ee0a2" transparent opacity={0} toneMapped={false} depthWrite={false} />
-    </mesh>
+    <>
+      {STATIONS.map((station, index) => (
+        <mesh
+          key={station.station}
+          ref={(node) => {
+            rings.current[index] = node;
+          }}
+          position={[station.position[0], 0.05, station.position[2]]}
+          rotation={[-Math.PI / 2, 0, 0]}
+          visible={false}
+        >
+          <ringGeometry args={[0.34, 0.48, 32]} />
+          <meshBasicMaterial color={station.color} transparent opacity={0} toneMapped={false} depthWrite={false} />
+        </mesh>
+      ))}
+    </>
   );
 }
 
@@ -89,7 +101,7 @@ function Scene({ look, reduced }: { look: Look; reduced: boolean }) {
       <Exposure value={look.exposure} />
       <Room look={look} />
       <WallScreen />
-      <ExecutionPulse reduced={reduced} />
+      <DeskPulses reduced={reduced} />
       {STATIONS.map((station) => {
         const bot = byStation.get(station.station);
         if (!bot) return null;

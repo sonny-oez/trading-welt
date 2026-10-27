@@ -5,7 +5,7 @@ import * as THREE from 'three';
 import type { Accessory } from './layout';
 import { AISLE_Z, STATIONS } from './layout';
 import { makeLabel } from './labels';
-import { executionPulseAge } from './tradePulse';
+import { stationPulseAge } from './tradePulse';
 
 interface Walk {
   mode: 'idle' | 'walk';
@@ -307,7 +307,7 @@ export function BotActor({
       eyes.current.scale.y = cycle > 4.58 ? 0.12 : 1;
     }
 
-    const age = station === 'ausfuehrung' && !reduced ? executionPulseAge() : -1;
+    const age = reduced ? -1 : stationPulseAge(station);
     if (age >= 0) {
       const bump = Math.sin(age * Math.PI);
       root.scale.setScalar(1 + bump * 0.12);
