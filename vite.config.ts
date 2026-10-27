@@ -48,7 +48,7 @@ export default defineConfig({
       manifest: {
         name: 'Trading-Welt',
         short_name: 'Trading-Welt',
-        description: 'Recherche-Desk und öffentlicher Hyperliquid-Markt. Kein Handel.',
+        description: 'Recherche-Desk mit virtueller Demo. Keine echten Orders.',
         lang: 'de',
         dir: 'ltr',
         id: '/trading-welt/',
@@ -79,6 +79,10 @@ export default defineConfig({
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/api\.hyperliquid\.xyz\/.*/i,
+            handler: 'NetworkOnly',
+          },
+          {
+            urlPattern: /^https:\/\/raw\.githubusercontent\.com\/sonny-oez\/trading-welt\/main\/public\/demo\/.*/i,
             handler: 'NetworkOnly',
           },
           {

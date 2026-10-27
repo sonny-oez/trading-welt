@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "mode": "paper",
+  "status": "starting",
+  "updated_utc": "2026-10-27T17:43:14.000Z",
+  "start_equity": 100,
+  "equity": 100,
+  "cash": 100,
+  "realized_pnl": 0,
+  "unrealized_pnl": 0,
+  "fees_paid": 0,
+  "max_leverage": 10,
+  "coins": ["BTC", "ETH", "SOL"],
+  "positions": [],
+  "trades": [],
+  "equity_curve": [{ "t": "2026-10-27T17:43:14.000Z", "equity": 100 }],
+  "note": "Die virtuelle Demo startet gleich. Noch keine Trades."
+}

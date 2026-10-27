@@ -1,55 +1,55 @@
 {
-  "mode": "Recherche",
-  "headline": "Recherche-Desk · kein Handel",
+  "mode": "Demo",
+  "headline": "Demo-Modus: virtueller Papierhandel mit 100 virtuellen USD zu Live-Kursen, keine echten Orders, kein echtes Wallet verbunden.",
   "bots": [
     {
       "station": "leitung",
       "name": "Leitung",
       "role": "Desk-Leitung",
-      "description": "Hält das Desk zusammen, sortiert Fragen und fasst den Recherche-Stand. Vergibt keine Aufträge.",
-      "status": "Recherche-Modus"
+      "description": "Hält das Desk zusammen und fasst den Stand. Die Demo bleibt virtuell und vergibt keine Aufträge an die Börse.",
+      "status": "Demo-Modus"
     },
     {
       "station": "markt",
       "name": "Markt",
       "role": "Marktanalyst",
-      "description": "Beobachtet Preis, Funding, Open Interest und Orderbuch. Nur Lesen, kein Handel.",
-      "status": "Recherche-Modus"
+      "description": "Beobachtet Preis, Funding, Open Interest und Orderbuch. Nur Lesen, die Demo bucht davon nichts echt.",
+      "status": "Demo-Modus"
     },
     {
       "station": "forschung",
       "name": "Forschung",
       "role": "Forschungsanalyst",
       "description": "Sammelt Kontext zu Narrativen, Freischaltungen und Protokolländerungen. Legt nichts an die Börse.",
-      "status": "Recherche-Modus"
+      "status": "Demo-Modus"
     },
     {
       "station": "strategie",
       "name": "Strategie",
       "role": "Stratege",
-      "description": "Skizziert Hypothesen und Szenarien für das Desk. Setzt keine Idee um.",
-      "status": "Recherche-Modus"
+      "description": "Skizziert Hypothesen und Szenarien für die virtuelle Demo. Setzt keine Idee an der Börse um.",
+      "status": "Demo-Modus"
     },
     {
       "station": "risiko",
       "name": "Risiko",
       "role": "Risikomanager",
       "description": "Prüft, was fehlen würde, bevor ein Limit überhaupt existiert. Limits sind nicht gesetzt.",
-      "status": "Recherche-Modus"
+      "status": "Demo-Modus"
     },
     {
       "station": "ausfuehrung",
       "name": "Ausführung",
       "role": "Ausführung",
-      "description": "Würde Orders vorbereiten. Ohne Wallet und ohne Freigabe wird nichts gesendet.",
-      "status": "Recherche-Modus"
+      "description": "Führt in der Demo nur virtuelle Papier-Trades. Keine echten Orders, kein echtes Wallet verbunden.",
+      "status": "Demo-Modus"
     },
     {
       "station": "nachlese",
       "name": "Nachlese",
       "role": "Nachlese",
-      "description": "Schaut sich Ideen im Nachhinein an. Es gibt keine Trades zum Bewerten.",
-      "status": "Recherche-Modus"
+      "description": "Schaut sich die virtuellen Demo-Trades an. Echte Fills gibt es hier nicht.",
+      "status": "Demo-Modus"
     }
   ],
   "safety": {

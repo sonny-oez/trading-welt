@@ -3,12 +3,14 @@ import { BotCards } from './BotCards';
 import { ChartPanel } from './ChartPanel';
 import { MarketCards } from './MarketCards';
 import { OrderBook } from './OrderBook';
+import { DemoPanel } from './DemoPanel';
 import { SafetyPanel } from './SafetyPanel';
 
 const TABS = [
   { id: 'markt', label: 'Markt' },
   { id: 'chart', label: 'Chart' },
   { id: 'buch', label: 'Buch' },
+  { id: 'demo', label: 'Demo' },
   { id: 'team', label: 'Team' },
   { id: 'schutz', label: 'Schutz' },
 ] as const;
@@ -48,6 +50,9 @@ export function PanelDeck() {
         </div>
         <div className="pane" id="panel-buch">
           <OrderBook />
+        </div>
+        <div className="pane" id="panel-demo">
+          <DemoPanel />
         </div>
         <div className="pane" id="panel-team">
           <BotCards />
