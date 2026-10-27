@@ -1,0 +1,61 @@
+{
+  "mode": "Recherche",
+  "headline": "Recherche-Desk · kein Handel",
+  "bots": [
+    {
+      "station": "leitung",
+      "name": "Leitung",
+      "role": "Desk-Leitung",
+      "description": "Hält das Desk zusammen, sortiert Fragen und fasst den Recherche-Stand. Vergibt keine Aufträge.",
+      "status": "Recherche-Modus"
+    },
+    {
+      "station": "markt",
+      "name": "Markt",
+      "role": "Marktanalyst",
+      "description": "Beobachtet Preis, Funding, Open Interest und Orderbuch. Nur Lesen, kein Handel.",
+      "status": "Recherche-Modus"
+    },
+    {
+      "station": "forschung",
+      "name": "Forschung",
+      "role": "Forschungsanalyst",
+      "description": "Sammelt Kontext zu Narrativen, Freischaltungen und Protokolländerungen. Legt nichts an die Börse.",
+      "status": "Recherche-Modus"
+    },
+    {
+      "station": "strategie",
+      "name": "Strategie",
+      "role": "Stratege",
+      "description": "Skizziert Hypothesen und Szenarien für das Desk. Setzt keine Idee um.",
+      "status": "Recherche-Modus"
+    },
+    {
+      "station": "risiko",
+      "name": "Risiko",
+      "role": "Risikomanager",
+      "description": "Prüft, was fehlen würde, bevor ein Limit überhaupt existiert. Limits sind nicht gesetzt.",
+      "status": "Recherche-Modus"
+    },
+    {
+      "station": "ausfuehrung",
+      "name": "Ausführung",
+      "role": "Ausführung",
+      "description": "Würde Orders vorbereiten. Ohne Wallet und ohne Freigabe wird nichts gesendet.",
+      "status": "Recherche-Modus"
+    },
+    {
+      "station": "nachlese",
+      "name": "Nachlese",
+      "role": "Nachlese",
+      "description": "Schaut sich Ideen im Nachhinein an. Es gibt keine Trades zum Bewerten.",
+      "status": "Recherche-Modus"
+    }
+  ],
+  "safety": {
+    "tradingEnabled": false,
+    "riskLimitsSet": false,
+    "apiWalletConnected": false,
+    "openOrders": false
+  }
+}
