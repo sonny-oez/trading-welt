@@ -3,13 +3,13 @@
  "mode": "paper",
  "label": "VIRTUELL – kein echtes Geld",
  "status": "running",
- "updated_utc": "2026-10-27T23:40:14.582Z",
+ "updated_utc": "2026-10-28T07:05:43.590Z",
  "start_equity": 100.0,
- "equity": 96.96807942949995,
- "cash": 58.328507429499936,
+ "equity": 96.62536077949994,
+ "cash": 4.234843779499943,
  "realized_pnl": -2.544963407500039,
- "unrealized_pnl": 0.28910000000000535,
- "fees_paid": 1.428760845,
+ "unrealized_pnl": 0.1404199999999997,
+ "fees_paid": 1.622799495,
  "max_leverage": 10,
  "coins": [
   "BTC",
@@ -24,13 +24,26 @@
    "side": "long",
    "size": 2.36,
    "entry": 81.251,
-   "mark": 81.3735,
+   "mark": 81.3105,
    "leverage": 5.0,
    "stop": 80.95585032,
    "take_profit": 81.74291614,
-   "unrealized_pnl": 0.28910000000000535,
+   "unrealized_pnl": 0.1404199999999997,
    "margin": 38.350472,
    "opened_utc": "2026-10-27T22:30:15.945Z"
+  },
+  {
+   "coin": "BTC",
+   "side": "long",
+   "size": 0.00533,
+   "entry": 80900.0,
+   "mark": 80900.0,
+   "leverage": 8.0,
+   "stop": 80831.60460517,
+   "take_profit": 81013.99232472,
+   "unrealized_pnl": 0.0,
+   "margin": 53.89962499999999,
+   "opened_utc": "2026-10-28T07:05:43.590Z"
   }
  ],
  "trades": [
@@ -228,6 +241,20 @@
    "action": "open",
    "price": 81.251,
    "notional": 191.75236,
+   "bot": "Execution Trader"
+  },
+  {
+   "coin": "BTC",
+   "side": "buy",
+   "size": 0.00533,
+   "pnl": 0.0,
+   "fee": 0.194039,
+   "reason": "EMA9/21 Long-Kreuz auf 5m + Trendfilter 1h-EMA50; SL 1.5 ATR / TP 2.5 ATR | Strategist→Risk Manager→Execution Trader",
+   "id": "t-15",
+   "time_utc": "2026-10-28T07:05:43.590Z",
+   "action": "open",
+   "price": 80900.0,
+   "notional": 431.197,
    "bot": "Execution Trader"
   }
  ],
@@ -1287,6 +1314,10 @@
   {
    "t": "2026-10-27T23:40:14.582Z",
    "equity": 96.968079
+  },
+  {
+   "t": "2026-10-28T07:05:43.590Z",
+   "equity": 96.625361
   }
  ],
  "note": "VIRTUELL – kein echtes Geld"
