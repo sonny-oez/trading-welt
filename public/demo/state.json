@@ -3,13 +3,13 @@
  "mode": "paper",
  "label": "VIRTUELL – kein echtes Geld",
  "status": "running",
- "updated_utc": "2026-10-28T08:29:15.011Z",
+ "updated_utc": "2026-10-28T08:30:18.637Z",
  "start_equity": 100.0,
- "equity": 97.77500574562576,
- "cash": 97.77500574562576,
+ "equity": 97.67285953462576,
+ "cash": 52.27454353462576,
  "realized_pnl": -1.0740513929300377,
  "unrealized_pnl": 0,
- "fees_paid": 2.24202375,
+ "fees_paid": 2.344169961,
  "max_leverage": 10,
  "coins": [
   "BTC",
@@ -18,7 +18,21 @@
   "HYPE",
   "NEAR"
  ],
- "positions": [],
+ "positions": [
+  {
+   "coin": "HYPE",
+   "side": "long",
+   "size": 2.78,
+   "entry": 81.65164748,
+   "mark": 81.65164748201441,
+   "leverage": 5.0,
+   "stop": 81.41467687,
+   "take_profit": 82.0465985,
+   "unrealized_pnl": 0.0,
+   "margin": 45.39831600000001,
+   "opened_utc": "2026-10-28T08:30:16.348Z"
+  }
+ ],
  "trades": [
   {
    "coin": "SOL",
@@ -285,13 +299,23 @@
    "price": 2364.4,
    "notional": 376.88536,
    "bot": "Execution Trader"
+  },
+  {
+   "coin": "HYPE",
+   "side": "buy",
+   "size": 2.78,
+   "pnl": 0.0,
+   "fee": 0.102146,
+   "reason": "EMA9/21 Long-Kreuz auf 5m + Trendfilter 1h-EMA50; SL 1.5 ATR / TP 2.5 ATR | Strategist→Risk Manager→Execution Trader",
+   "id": "t-20",
+   "time_utc": "2026-10-28T08:30:16.348Z",
+   "action": "open",
+   "price": 81.65164748,
+   "notional": 226.99158,
+   "bot": "Execution Trader"
   }
  ],
  "equity_curve": [
-  {
-   "t": "2026-10-27T18:13:06.140Z",
-   "equity": 99.92506600000002
-  },
   {
    "t": "2026-10-27T18:14:03.231Z",
    "equity": 99.850966
@@ -1487,6 +1511,10 @@
   {
    "t": "2026-10-28T08:29:15.011Z",
    "equity": 97.775006
+  },
+  {
+   "t": "2026-10-28T08:30:18.637Z",
+   "equity": 97.67286
   }
  ],
  "note": "VIRTUELL – kein echtes Geld"
