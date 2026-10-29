@@ -3,7 +3,7 @@
  "mode": "paper",
  "label": "VIRTUELL – kein echtes Geld",
  "status": "running",
- "updated_utc": "2026-10-29T11:27:37.467Z",
+ "updated_utc": "2026-10-29T11:40:28.034Z",
  "start_equity": 100.0,
  "equity": 95.62571060048164,
  "cash": 95.62571060048164,
@@ -453,13 +453,23 @@
    "price": 80089.0,
    "notional": 341.98003,
    "bot": "Execution Trader"
+  },
+  {
+   "coin": "BTC",
+   "side": "buy",
+   "size": 0.0,
+   "pnl": 0.0,
+   "fee": 0.0,
+   "reason": "REJECT: daily_loss_stop_active",
+   "id": "rej-32",
+   "time_utc": "2026-10-29T11:40:16.271Z",
+   "action": "open",
+   "price": 0.0,
+   "notional": 0.0,
+   "bot": "Risk Manager"
   }
  ],
  "equity_curve": [
-  {
-   "t": "2026-10-28T12:44:21.729Z",
-   "equity": 98.894135
-  },
   {
    "t": "2026-10-28T12:45:22.729Z",
    "equity": 98.894135
@@ -1654,6 +1664,10 @@
   },
   {
    "t": "2026-10-29T11:27:37.467Z",
+   "equity": 95.625711
+  },
+  {
+   "t": "2026-10-29T11:40:28.034Z",
    "equity": 95.625711
   }
  ],
