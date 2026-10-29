@@ -43,10 +43,10 @@ function useFloorTexture() {
     canvas.height = 512;
     const ctx = canvas.getContext('2d');
     if (!ctx) return null;
-    ctx.fillStyle = '#141722';
+    ctx.fillStyle = '#12151e';
     ctx.fillRect(0, 0, 512, 512);
-    ctx.strokeStyle = 'rgba(150, 186, 230, 0.14)';
-    ctx.lineWidth = 2;
+    ctx.strokeStyle = 'rgba(176, 198, 230, 0.07)';
+    ctx.lineWidth = 1;
     for (let i = 0; i <= 512; i += 64) {
       ctx.beginPath();
       ctx.moveTo(i, 0);
@@ -57,8 +57,8 @@ function useFloorTexture() {
       ctx.lineTo(512, i);
       ctx.stroke();
     }
-    const glow = ctx.createRadialGradient(256, 220, 20, 256, 220, 260);
-    glow.addColorStop(0, 'rgba(90, 190, 255, 0.09)');
+    const glow = ctx.createRadialGradient(256, 240, 16, 256, 240, 240);
+    glow.addColorStop(0, 'rgba(94, 196, 214, 0.1)');
     glow.addColorStop(1, 'rgba(0, 0, 0, 0)');
     ctx.fillStyle = glow;
     ctx.fillRect(0, 0, 512, 512);
@@ -84,8 +84,12 @@ function Desk({
   return (
     <group position={position}>
       <RoundedBox args={[1.02, 0.07, 0.58]} radius={0.04} smoothness={2} position={[0, 0.74, 0]}>
-        <meshStandardMaterial color="#262b3c" metalness={0.42} roughness={0.38} />
+        <meshStandardMaterial color="#2a3142" metalness={0.22} roughness={0.46} />
       </RoundedBox>
+      <mesh position={[0, 0.782, 0.28]}>
+        <boxGeometry args={[1.02, 0.012, 0.02]} />
+        <meshStandardMaterial color={color} emissive={color} emissiveIntensity={0.35} roughness={0.4} />
+      </mesh>
       {[
         [-0.52, -0.26],
         [0.52, -0.26],
@@ -104,11 +108,13 @@ function Desk({
         </mesh>
         <mesh position={[0, 0, 0.028]}>
           <planeGeometry args={[0.62, 0.34]} />
-          <meshBasicMaterial color={color} toneMapped={false} />
-        </mesh>
-        <mesh position={[0, 0, -0.04]}>
-          <planeGeometry args={[0.95, 0.62]} />
-          <meshBasicMaterial color={color} transparent opacity={0.18} depthWrite={false} toneMapped={false} />
+          <meshStandardMaterial
+            color="#10141c"
+            emissive={color}
+            emissiveIntensity={0.42}
+            roughness={0.28}
+            metalness={0.08}
+          />
         </mesh>
         <mesh position={[0, -0.28, 0.01]}>
           <boxGeometry args={[0.05, 0.14, 0.04]} />
@@ -254,16 +260,16 @@ export function Room({ look }: { look: Look }) {
       <ambientLight color={look.ambient} intensity={look.ambientIntensity} />
       <directionalLight position={[4.5, 7.5, 5]} color={look.key} intensity={look.keyIntensity} />
       <directionalLight position={[-5, 3.2, -2]} color={look.fill} intensity={look.fillIntensity} />
-      <pointLight position={[0, 3.2, 0.4]} color="#d7ecff" intensity={18} distance={16} />
-      <pointLight position={[0, 2.4, -4.2]} color="#7ad7ff" intensity={8} distance={9} />
+      <pointLight position={[0, 3.4, 1.2]} color="#e7f2ff" intensity={6} distance={14} decay={2} />
+      <pointLight position={[0, 2.6, -3.6]} color="#7ec8e0" intensity={3.2} distance={8} decay={2} />
 
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 0.6]}>
         <planeGeometry args={[14, 11.2]} />
         <meshStandardMaterial
-          color="#9aa4b8"
+          color="#c5cedc"
           map={floorMap ?? undefined}
-          metalness={0.48}
-          roughness={0.42}
+          metalness={0.18}
+          roughness={0.72}
         />
       </mesh>
       <mesh position={[0, 2.15, -4.95]}>
@@ -306,6 +312,10 @@ export function Room({ look }: { look: Look }) {
 
       {STATIONS.map((station) => (
         <group key={station.station}>
+          <mesh rotation={[-Math.PI / 2, 0, 0]} position={[station.position[0], 0.015, station.position[2]]}>
+            <circleGeometry args={[0.62, 20]} />
+            <meshBasicMaterial color="#05060a" transparent opacity={0.35} depthWrite={false} />
+          </mesh>
           <Desk
             position={[station.position[0], 0, station.position[2] - 0.78]}
             color={station.color}

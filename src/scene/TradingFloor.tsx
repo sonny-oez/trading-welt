@@ -81,8 +81,8 @@ function Effects() {
       frameBufferType={THREE.HalfFloatType}
     >
       <Bloom
-        intensity={0.45}
-        luminanceThreshold={0.72}
+        intensity={0.32}
+        luminanceThreshold={0.82}
         luminanceSmoothing={0.2}
         mipmapBlur
         radius={0.42}

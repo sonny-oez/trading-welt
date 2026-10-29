@@ -19,7 +19,7 @@ function QuoteRun({ copy }: { copy: string }) {
   });
   return (
     <div className="ticker-run" aria-hidden={copy === 'b'}>
-      <span className="research-pill">Nur Recherche</span>
+      <span className="research-pill">Öffentliche Kurse</span>
       {items.map((item) => (
         <span key={`${copy}-${item.coin}`} className="tick">
           <b>{item.coin}</b>
@@ -37,7 +37,7 @@ export function TopBar() {
   const notice = useMarket((state) => state.notice);
   const atmo = useBerlinAtmosphere();
   const live = status === 'live';
-  const label = status === 'loading' ? 'Verbinde…' : live ? 'Live' : 'Offline';
+  const label = status === 'loading' ? 'Verbinde…' : live ? 'Kurse' : 'Offline';
 
   return (
     <header className="topbar">
@@ -66,8 +66,10 @@ export function TopBar() {
       </div>
       <p className="stand">
         <LiveMark />
-        <span>Stand {updatedAt ? formatBerlin(updatedAt) : '—'}</span>
-        <span className="stand-note">{notice ?? 'Nur Lesen'}</span>
+        <span className="stand-meta">
+          <span>Stand {updatedAt ? formatBerlin(updatedAt) : '—'}</span>
+          <span className="stand-note">{notice ?? 'Nur Lesen'}</span>
+        </span>
       </p>
     </header>
   );

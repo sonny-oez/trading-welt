@@ -21,19 +21,19 @@ export interface Atmosphere {
 }
 
 const night: Look = {
-  bg: '#070912',
-  ambient: '#8ea0c4',
-  ambientIntensity: 0.34,
-  key: '#9bb6ff',
-  keyIntensity: 0.7,
-  fill: '#243056',
-  fillIntensity: 0.35,
-  window: '#1d4c86',
-  windowIntensity: 1.15,
-  hemiSky: '#24345c',
-  hemiGround: '#140e0c',
-  exposure: 1.08,
-  cssBg: 'radial-gradient(90% 60% at 50% 0%, #1a2744 0%, #070912 62%)',
+  bg: '#090b12',
+  ambient: '#b7c4de',
+  ambientIntensity: 0.52,
+  key: '#d5e2ff',
+  keyIntensity: 0.95,
+  fill: '#31456f',
+  fillIntensity: 0.42,
+  window: '#2a6498',
+  windowIntensity: 0.62,
+  hemiSky: '#31466e',
+  hemiGround: '#16120f',
+  exposure: 1.05,
+  cssBg: 'radial-gradient(90% 55% at 50% 0%, #1c2a42 0%, #090b12 64%)',
 };
 
 const dawn: Look = {
