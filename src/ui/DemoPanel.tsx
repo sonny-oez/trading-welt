@@ -101,40 +101,44 @@ function Metrics({ state }: { state: DemoState }) {
   const delta = state.equity - state.startEquity;
   const pct = state.startEquity !== 0 ? (delta / state.startEquity) * 100 : null;
   return (
-    <>
-      <p className="demo-equity">{formatMoney(state.equity)}</p>
+    <div className="equity-hero">
+      <span className="virt-tag">Virtuelles Geld</span>
+      <p className="demo-equity">
+        {formatMoney(state.equity, false)}
+        <small>virtuelle USD</small>
+      </p>
       <p className={`demo-delta ${tone(delta)}`}>
         {formatSignedMoney(delta)}
         {pct == null ? '' : ` · ${formatPct(pct)}`}
-        <span> gegen {formatMoney(state.startEquity)} Start</span>
+        <span> gegen {formatMoney(state.startEquity, false)} virtuelle USD Start</span>
       </p>
       <div className="demo-grid">
         <div>
-          <span>Realisiert</span>
+          <span>Realisiert · virtuell</span>
           <b className={tone(state.realizedPnl)}>{formatSignedMoney(state.realizedPnl)}</b>
         </div>
         <div>
-          <span>Offen</span>
+          <span>Offen · virtuell</span>
           <b className={tone(state.unrealizedPnl)}>{formatSignedMoney(state.unrealizedPnl)}</b>
         </div>
         <div>
-          <span>Gebühren</span>
+          <span>Gebühren · virtuell</span>
           <b>{formatMoney(state.feesPaid)}</b>
         </div>
         <div>
-          <span>Cash</span>
+          <span>Cash · virtuell</span>
           <b>{formatMoney(state.cash)}</b>
         </div>
       </div>
-      <p className="demo-cap">Hebel-Limit {formatSize(state.maxLeverage)}×</p>
-    </>
+      <p className="demo-cap">Hebel-Limit {formatSize(state.maxLeverage)}× · nur Demo</p>
+    </div>
   );
 }
 
 function Positions({ state }: { state: DemoState }) {
   return (
     <section>
-      <h3>Offene Positionen</h3>
+      <h3>Offene Positionen · virtuell</h3>
       {state.positions.length === 0 ? <p className="empty">Keine offenen Positionen</p> : null}
       <ul className="demo-list">
         {state.positions.map((position) => (
@@ -195,7 +199,7 @@ function Positions({ state }: { state: DemoState }) {
 function Trades({ state }: { state: DemoState }) {
   return (
     <section>
-      <h3>Trades</h3>
+      <h3>Trades · virtuell</h3>
       {state.trades.length === 0 ? <p className="empty">Noch keine Trades</p> : null}
       <ul className="demo-list">
         {state.trades.map((trade) => (
@@ -235,7 +239,7 @@ function Trades({ state }: { state: DemoState }) {
                 <dd>{trade.bot || '—'}</dd>
               </div>
             </dl>
-            {trade.reason ? <p className="demo-reason">{trade.reason}</p> : null}
+            {trade.reason ? <p className="demo-reason" title={trade.reason}>{trade.reason}</p> : null}
           </li>
         ))}
       </ul>
@@ -313,10 +317,10 @@ export function DemoPanel() {
             <p className="demo-note">Läuft · Stand {formatBerlinStamp(state.updatedUtc)}.</p>
           ) : null}
           <Metrics state={state} />
-          {state.note ? <p className="demo-note">{state.note}</p> : null}
+          {state.note && state.note !== DEMO_COPY.virtual ? <p className="demo-note">{state.note}</p> : null}
           <Positions state={state} />
           <section>
-            <h3>Kontostand</h3>
+            <h3>Kontostand · virtuell</h3>
             <EquityChart points={state.equityCurve} start={state.startEquity} />
           </section>
           <Trades state={state} />

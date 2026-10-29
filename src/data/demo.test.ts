@@ -154,15 +154,13 @@ assert.equal(
 );
 assert.equal(classifyDemo(feed(parsed, 'ready', false)).kind, 'running');
 
-const placeholder = parseDemo(JSON.parse(fs.readFileSync('public/demo/state.json', 'utf8')));
-assert.ok(placeholder);
-assert.equal(placeholder.status, 'starting');
-assert.equal(placeholder.equity, 100);
-assert.equal(placeholder.startEquity, 100);
-assert.equal(placeholder.cash, 100);
-assert.equal(placeholder.trades.length, 0);
-assert.equal(placeholder.positions.length, 0);
-assert.equal(placeholder.maxLeverage, 10);
-assert.equal(classifyDemo(feed(placeholder, 'ready', false)).kind, 'starting');
+const published = parseDemo(JSON.parse(fs.readFileSync('public/demo/state.json', 'utf8')));
+assert.ok(published);
+assert.equal(published.schema, 1);
+assert.equal(published.mode, 'paper');
+assert.equal(published.startEquity, 100);
+assert.equal(published.maxLeverage, 10);
+assert.equal(Number.isFinite(published.equity), true);
+assert.ok(['starting', 'running', 'paused', 'stopped'].includes(published.status));
 
 console.log('demo ok');

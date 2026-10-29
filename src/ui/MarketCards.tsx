@@ -34,11 +34,11 @@ function Card({
               <dd>{formatFunding(asset.fundingAnnPct)}</dd>
             </div>
             <div>
-              <dt>Open Interest</dt>
+              <dt title="Open Interest">OI</dt>
               <dd>{formatUsd(asset.oiUsd)}</dd>
             </div>
             <div>
-              <dt>Volumen 24h</dt>
+              <dt>Volumen</dt>
               <dd>{formatUsd(asset.volumeUsd)}</dd>
             </div>
           </dl>
