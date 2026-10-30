@@ -3,13 +3,13 @@
  "mode": "paper",
  "label": "VIRTUELL – kein echtes Geld",
  "status": "running",
- "updated_utc": "2026-10-30T18:32:57.438Z",
+ "updated_utc": "2026-10-30T18:33:58.076Z",
  "start_equity": 100.0,
- "equity": 97.89817953300505,
- "cash": 37.897049533005074,
- "realized_pnl": -1.223893882129944,
- "unrealized_pnl": 1.3243999999999732,
- "fees_paid": 4.2064231275,
+ "equity": 98.01903984650505,
+ "cash": 64.46511084650507,
+ "realized_pnl": 0.11247143137005211,
+ "unrealized_pnl": 0.10889499999998634,
+ "fees_paid": 4.262567814,
  "max_leverage": 10,
  "coins": [
   "BTC",
@@ -20,47 +20,20 @@
  ],
  "positions": [
   {
-   "coin": "SOL",
-   "side": "short",
-   "size": 1.33,
-   "entry": 94.856,
-   "mark": 93.9195,
-   "leverage": 5.0,
-   "stop": 95.45566629,
-   "take_profit": 93.85655619,
-   "unrealized_pnl": 1.2455449999999937,
-   "margin": 25.231696,
-   "opened_utc": "2026-10-30T16:56:24.548Z"
-  },
-  {
    "coin": "ETH",
    "side": "short",
    "size": 0.0751,
    "entry": 2226.7,
-   "mark": 2225.65,
+   "mark": 2225.25,
    "leverage": 5.0,
    "stop": 2236.58650963,
    "take_profit": 2210.22248395,
-   "unrealized_pnl": 0.07885499999997951,
+   "unrealized_pnl": 0.10889499999998634,
    "margin": 33.445034,
    "opened_utc": "2026-10-30T18:32:10.029Z"
   }
  ],
  "trades": [
-  {
-   "coin": "BTC",
-   "side": "buy",
-   "size": 0.0,
-   "pnl": 0.0,
-   "fee": 0.0,
-   "reason": "REJECT: daily_loss_stop_active",
-   "id": "rej-2",
-   "time_utc": "2026-10-27T18:20:07.287Z",
-   "action": "open",
-   "price": 0.0,
-   "notional": 0.0,
-   "bot": "Risk Manager"
-  },
   {
    "coin": "SOL",
    "side": "buy",
@@ -746,13 +719,23 @@
    "price": 2226.7,
    "notional": 167.22517,
    "bot": "Execution Trader"
+  },
+  {
+   "coin": "SOL",
+   "side": "buy",
+   "size": 1.33,
+   "pnl": 1.336365,
+   "fee": 0.056145,
+   "reason": "take_profit; EMA9/21 Short-Kreuz auf 5m + Trendfilter 1h-EMA50; SL 1.5 ATR / TP 2.5 ATR",
+   "id": "t-52",
+   "time_utc": "2026-10-30T18:33:58.075Z",
+   "action": "close",
+   "price": 93.809,
+   "notional": 124.76597,
+   "bot": "Execution Trader"
   }
  ],
  "equity_curve": [
-  {
-   "t": "2026-10-29T21:21:56.891Z",
-   "equity": 95.625711
-  },
   {
    "t": "2026-10-29T21:22:57.604Z",
    "equity": 95.625711
@@ -1948,6 +1931,10 @@
   {
    "t": "2026-10-30T18:32:57.438Z",
    "equity": 97.89818
+  },
+  {
+   "t": "2026-10-30T18:33:44.985Z",
+   "equity": 97.96163
   }
  ],
  "note": "VIRTUELL – kein echtes Geld"
