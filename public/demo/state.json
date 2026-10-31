@@ -3,7 +3,7 @@
  "mode": "paper",
  "label": "VIRTUELL – kein echtes Geld",
  "status": "running",
- "updated_utc": "2026-10-31T08:22:47.386Z",
+ "updated_utc": "2026-10-31T08:35:16.507Z",
  "start_equity": 100.0,
  "equity": 94.10639992682317,
  "cash": 94.10639992682317,
@@ -20,20 +20,6 @@
  ],
  "positions": [],
  "trades": [
-  {
-   "coin": "HYPE",
-   "side": "sell",
-   "size": 2.17,
-   "pnl": -0.860239,
-   "fee": 0.079039,
-   "reason": "stop; EMA9/21 Long-Kreuz auf 5m + Trendfilter 1h-EMA50; SL 1.5 ATR / TP 2.5 ATR",
-   "id": "t-13",
-   "time_utc": "2026-10-27T22:02:08.100Z",
-   "action": "close",
-   "price": 80.941,
-   "notional": 175.64197,
-   "bot": "Execution Trader"
-  },
   {
    "coin": "HYPE",
    "side": "buy",
@@ -719,17 +705,23 @@
    "price": 4.325,
    "notional": 133.21,
    "bot": "Execution Trader"
+  },
+  {
+   "coin": "ETH",
+   "side": "buy",
+   "size": 0.0,
+   "pnl": 0.0,
+   "fee": 0.0,
+   "reason": "REJECT: cost-filter:target_0.7230<3x_roundtrip_0.6868",
+   "id": "rej-63",
+   "time_utc": "2026-10-31T08:34:23.303Z",
+   "action": "open",
+   "price": 0.0,
+   "notional": 0.0,
+   "bot": "Risk Manager"
   }
  ],
  "equity_curve": [
-  {
-   "t": "2026-10-30T15:34:47.916Z",
-   "equity": 97.73871
-  },
-  {
-   "t": "2026-10-30T15:35:49.260Z",
-   "equity": 97.73871
-  },
   {
    "t": "2026-10-30T15:36:50.512Z",
    "equity": 97.73871
@@ -1920,6 +1912,14 @@
   },
   {
    "t": "2026-10-31T08:22:47.386Z",
+   "equity": 94.1064
+  },
+  {
+   "t": "2026-10-31T08:34:25.798Z",
+   "equity": 94.1064
+  },
+  {
+   "t": "2026-10-31T08:35:16.507Z",
    "equity": 94.1064
   }
  ],
