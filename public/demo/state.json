@@ -3,12 +3,12 @@
  "mode": "paper",
  "label": "VIRTUELL – kein echtes Geld",
  "status": "running",
- "updated_utc": "2026-11-01T13:11:17.346Z",
+ "updated_utc": "2026-11-01T13:18:52.868Z",
  "start_equity": 100.0,
- "equity": 89.49787981737322,
+ "equity": 89.41987981737323,
  "cash": 55.308841817373214,
  "realized_pnl": -7.6174070846299164,
- "unrealized_pnl": -0.1310399999999925,
+ "unrealized_pnl": -0.2090399999999839,
  "fees_paid": 5.365680781499999,
  "max_leverage": 10,
  "coins": [
@@ -24,30 +24,16 @@
    "side": "long",
    "size": 39.0,
    "entry": 4.40001,
-   "mark": 4.39665,
+   "mark": 4.39465,
    "leverage": 5.0,
    "stop": 4.38317304,
    "take_profit": 4.42807159,
-   "unrealized_pnl": -0.1310399999999925,
+   "unrealized_pnl": -0.2090399999999839,
    "margin": 34.320078,
    "opened_utc": "2026-11-01T13:08:21.605Z"
   }
  ],
  "trades": [
-  {
-   "coin": "ETH",
-   "side": "buy",
-   "size": 0.0,
-   "pnl": 0.0,
-   "fee": 0.0,
-   "reason": "REJECT: cost-filter:target_1.0852<3x_roundtrip_0.4115",
-   "id": "rej-39",
-   "time_utc": "2026-10-30T07:40:39.106Z",
-   "action": "open",
-   "price": 0.0,
-   "notional": 0.0,
-   "bot": "Risk Manager"
-  },
   {
    "coin": "SOL",
    "side": "sell",
@@ -733,13 +719,23 @@
    "price": 4.40001,
    "notional": 171.60039,
    "bot": "Execution Trader"
+  },
+  {
+   "coin": "BTC",
+   "side": "buy",
+   "size": 0.0,
+   "pnl": 0.0,
+   "fee": 0.0,
+   "reason": "REJECT: cost-filter:target_0.6010<3x_roundtrip_0.7237",
+   "id": "rej-89",
+   "time_utc": "2026-11-01T13:18:44.556Z",
+   "action": "open",
+   "price": 0.0,
+   "notional": 0.0,
+   "bot": "Risk Manager"
   }
  ],
  "equity_curve": [
-  {
-   "t": "2026-10-31T15:08:51.584Z",
-   "equity": 92.937467
-  },
   {
    "t": "2026-10-31T15:09:45.088Z",
    "equity": 92.937467
@@ -1935,6 +1931,10 @@
   {
    "t": "2026-11-01T13:11:17.346Z",
    "equity": 89.49788
+  },
+  {
+   "t": "2026-11-01T13:18:52.868Z",
+   "equity": 89.41988
   }
  ],
  "note": "VIRTUELL – kein echtes Geld"
