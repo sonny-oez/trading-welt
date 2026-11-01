@@ -3,7 +3,7 @@
  "mode": "paper",
  "label": "VIRTUELL – kein echtes Geld",
  "status": "running",
- "updated_utc": "2026-11-01T16:20:08.627Z",
+ "updated_utc": "2026-11-01T16:34:24.973Z",
  "start_equity": 100.0,
  "equity": 88.8747659168732,
  "cash": 88.8747659168732,
@@ -20,34 +20,6 @@
  ],
  "positions": [],
  "trades": [
-  {
-   "coin": "NEAR",
-   "side": "buy",
-   "size": 21.8,
-   "pnl": -1.217203,
-   "fee": 0.042183,
-   "reason": "gap; EMA9/21 Short-Kreuz auf 5m + Trendfilter 1h-EMA50; SL 1.5 ATR / TP 2.5 ATR",
-   "id": "t-43",
-   "time_utc": "2026-10-30T08:02:26.068Z",
-   "action": "close",
-   "price": 4.3,
-   "notional": 93.74,
-   "bot": "Execution Trader"
-  },
-  {
-   "coin": "SOL",
-   "side": "sell",
-   "size": 1.91,
-   "pnl": 0.0,
-   "fee": 0.083219,
-   "reason": "EMA9/21 Short-Kreuz auf 5m + Trendfilter 1h-EMA50; SL 1.5 ATR / TP 2.5 ATR | Strategist→Risk Manager→Execution Trader",
-   "id": "t-44",
-   "time_utc": "2026-10-30T11:25:21.492Z",
-   "action": "open",
-   "price": 96.82286387,
-   "notional": 184.93167,
-   "bot": "Execution Trader"
-  },
   {
    "coin": "NEAR",
    "side": "sell",
@@ -719,13 +691,37 @@
    "price": 0.0,
    "notional": 0.0,
    "bot": "Risk Manager"
+  },
+  {
+   "coin": "BTC",
+   "side": "buy",
+   "size": 0.0,
+   "pnl": 0.0,
+   "fee": 0.0,
+   "reason": "REJECT: cost-filter:target_0.6061<3x_roundtrip_0.7110",
+   "id": "rej-93",
+   "time_utc": "2026-11-01T16:34:09.981Z",
+   "action": "open",
+   "price": 0.0,
+   "notional": 0.0,
+   "bot": "Risk Manager"
+  },
+  {
+   "coin": "ETH",
+   "side": "buy",
+   "size": 0.0,
+   "pnl": 0.0,
+   "fee": 0.0,
+   "reason": "REJECT: cost-filter:target_0.7095<3x_roundtrip_0.6288",
+   "id": "rej-94",
+   "time_utc": "2026-11-01T16:34:16.474Z",
+   "action": "open",
+   "price": 0.0,
+   "notional": 0.0,
+   "bot": "Risk Manager"
   }
  ],
  "equity_curve": [
-  {
-   "t": "2026-10-31T17:57:30.455Z",
-   "equity": 92.937467
-  },
   {
    "t": "2026-10-31T17:58:21.947Z",
    "equity": 92.937467
@@ -1920,6 +1916,10 @@
   },
   {
    "t": "2026-11-01T16:20:08.627Z",
+   "equity": 88.874766
+  },
+  {
+   "t": "2026-11-01T16:34:24.973Z",
    "equity": 88.874766
   }
  ],
