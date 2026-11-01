@@ -3,13 +3,13 @@
  "mode": "paper",
  "label": "VIRTUELL – kein echtes Geld",
  "status": "running",
- "updated_utc": "2026-11-01T09:39:03.344Z",
+ "updated_utc": "2026-11-01T09:49:45.274Z",
  "start_equity": 100.0,
- "equity": 91.66176756962322,
- "cash": 56.82846756962319,
- "realized_pnl": -5.421940751629929,
- "unrealized_pnl": -0.31355999999998335,
- "fees_paid": 5.056806213,
+ "equity": 90.6414427266232,
+ "cash": 90.6414427266232,
+ "realized_pnl": -6.755825594629934,
+ "unrealized_pnl": 0,
+ "fees_paid": 5.136451055999999,
  "max_leverage": 10,
  "coins": [
   "BTC",
@@ -18,36 +18,8 @@
   "HYPE",
   "NEAR"
  ],
- "positions": [
-  {
-   "coin": "NEAR",
-   "side": "short",
-   "size": 40.2,
-   "entry": 4.3715,
-   "mark": 4.3793,
-   "leverage": 5.0,
-   "stop": 4.38825202,
-   "take_profit": 4.34357996,
-   "unrealized_pnl": -0.31355999999998335,
-   "margin": 35.146860000000004,
-   "opened_utc": "2026-11-01T09:35:08.525Z"
-  }
- ],
+ "positions": [],
  "trades": [
-  {
-   "coin": "BTC",
-   "side": "buy",
-   "size": 0.00427,
-   "pnl": -0.738881,
-   "fee": 0.153891,
-   "reason": "stop; EMA9/21 Short-Kreuz auf 5m + Trendfilter 1h-EMA50; SL 1.5 ATR / TP 2.5 ATR",
-   "id": "t-31",
-   "time_utc": "2026-10-29T09:03:07.575Z",
-   "action": "close",
-   "price": 80089.0,
-   "notional": 341.98003,
-   "bot": "Execution Trader"
-  },
   {
    "coin": "BTC",
    "side": "buy",
@@ -733,13 +705,23 @@
    "price": 4.3715,
    "notional": 175.7343,
    "bot": "Execution Trader"
+  },
+  {
+   "coin": "NEAR",
+   "side": "buy",
+   "size": 40.2,
+   "pnl": -1.333885,
+   "fee": 0.079645,
+   "reason": "gap; EMA9/21 Short-Kreuz auf 5m + Trendfilter 1h-EMA50; SL 1.5 ATR / TP 2.5 ATR",
+   "id": "t-81",
+   "time_utc": "2026-11-01T09:49:31.632Z",
+   "action": "close",
+   "price": 4.4027,
+   "notional": 176.98854,
+   "bot": "Execution Trader"
   }
  ],
  "equity_curve": [
-  {
-   "t": "2026-10-31T12:11:11.216Z",
-   "equity": 92.937467
-  },
   {
    "t": "2026-10-31T12:12:02.233Z",
    "equity": 92.937467
@@ -1935,6 +1917,10 @@
   {
    "t": "2026-11-01T09:39:03.344Z",
    "equity": 91.661768
+  },
+  {
+   "t": "2026-11-01T09:49:45.274Z",
+   "equity": 90.641443
   }
  ],
  "note": "VIRTUELL – kein echtes Geld"
