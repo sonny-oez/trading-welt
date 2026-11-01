@@ -3,13 +3,13 @@
  "mode": "paper",
  "label": "VIRTUELL – kein echtes Geld",
  "status": "running",
- "updated_utc": "2026-11-01T11:04:57.635Z",
+ "updated_utc": "2026-11-01T11:06:07.372Z",
  "start_equity": 100.0,
- "equity": 90.6414427266232,
- "cash": 90.6414427266232,
+ "equity": 90.56561466662319,
+ "cash": 56.8642546666232,
  "realized_pnl": -6.755825594629934,
  "unrealized_pnl": 0,
- "fees_paid": 5.136451055999999,
+ "fees_paid": 5.2122791159999995,
  "max_leverage": 10,
  "coins": [
   "BTC",
@@ -18,36 +18,22 @@
   "HYPE",
   "NEAR"
  ],
- "positions": [],
+ "positions": [
+  {
+   "coin": "NEAR",
+   "side": "short",
+   "size": 38.5,
+   "entry": 4.3768,
+   "mark": 4.3768,
+   "leverage": 5.0,
+   "stop": 4.39420462,
+   "take_profit": 4.3477923,
+   "unrealized_pnl": 0.0,
+   "margin": 33.70136,
+   "opened_utc": "2026-11-01T11:06:07.372Z"
+  }
+ ],
  "trades": [
-  {
-   "coin": "ETH",
-   "side": "buy",
-   "size": 0.0,
-   "pnl": 0.0,
-   "fee": 0.0,
-   "reason": "REJECT: daily_loss_stop_active",
-   "id": "rej-34",
-   "time_utc": "2026-10-29T12:35:52.039Z",
-   "action": "open",
-   "price": 0.0,
-   "notional": 0.0,
-   "bot": "Risk Manager"
-  },
-  {
-   "coin": "BTC",
-   "side": "buy",
-   "size": 0.0,
-   "pnl": 0.0,
-   "fee": 0.0,
-   "reason": "REJECT: daily_loss_stop_active",
-   "id": "rej-35",
-   "time_utc": "2026-10-29T13:40:34.535Z",
-   "action": "open",
-   "price": 0.0,
-   "notional": 0.0,
-   "bot": "Risk Manager"
-  },
   {
    "coin": "ETH",
    "side": "buy",
@@ -719,13 +705,37 @@
    "price": 0.0,
    "notional": 0.0,
    "bot": "Risk Manager"
+  },
+  {
+   "coin": "HYPE",
+   "side": "buy",
+   "size": 0.0,
+   "pnl": 0.0,
+   "fee": 0.0,
+   "reason": "REJECT: cost-filter:target_1.0237<3x_roundtrip_0.3920",
+   "id": "rej-84",
+   "time_utc": "2026-11-01T11:06:00.694Z",
+   "action": "open",
+   "price": 0.0,
+   "notional": 0.0,
+   "bot": "Risk Manager"
+  },
+  {
+   "coin": "NEAR",
+   "side": "sell",
+   "size": 38.5,
+   "pnl": 0.0,
+   "fee": 0.075828,
+   "reason": "EMA9/21 Short-Kreuz auf 5m + Trendfilter 1h-EMA50; SL 1.5 ATR / TP 2.5 ATR | Strategist→Risk Manager→Execution Trader",
+   "id": "t-85",
+   "time_utc": "2026-11-01T11:06:07.372Z",
+   "action": "open",
+   "price": 4.3768,
+   "notional": 168.5068,
+   "bot": "Execution Trader"
   }
  ],
  "equity_curve": [
-  {
-   "t": "2026-10-31T13:22:37.545Z",
-   "equity": 92.937467
-  },
   {
    "t": "2026-10-31T13:23:28.450Z",
    "equity": 92.937467
@@ -1921,6 +1931,10 @@
   {
    "t": "2026-11-01T11:04:57.635Z",
    "equity": 90.641443
+  },
+  {
+   "t": "2026-11-01T11:06:07.372Z",
+   "equity": 90.565615
   }
  ],
  "note": "VIRTUELL – kein echtes Geld"
