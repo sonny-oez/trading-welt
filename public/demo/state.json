@@ -3,13 +3,13 @@
  "mode": "paper",
  "label": "VIRTUELL – kein echtes Geld",
  "status": "running",
- "updated_utc": "2026-11-02T15:10:18.740Z",
+ "updated_utc": "2026-11-02T15:11:24.918Z",
  "start_equity": 100.0,
- "equity": 89.36278372902625,
- "cash": 55.58286472902625,
- "realized_pnl": -8.020865479629936,
- "unrealized_pnl": 0.33541499999999175,
- "fees_paid": 5.769464732999999,
+ "equity": 88.31141860808874,
+ "cash": 88.31141860808874,
+ "realized_pnl": -8.738914743129936,
+ "unrealized_pnl": 0,
+ "fees_paid": 5.845003996499998,
  "max_leverage": 10,
  "coins": [
   "BTC",
@@ -18,50 +18,8 @@
   "HYPE",
   "NEAR"
  ],
- "positions": [
-  {
-   "coin": "SOL",
-   "side": "short",
-   "size": 1.77,
-   "entry": 94.476,
-   "mark": 94.2865,
-   "leverage": 5.0,
-   "stop": 94.84565068,
-   "take_profit": 93.85991554,
-   "unrealized_pnl": 0.33541499999999175,
-   "margin": 33.444504,
-   "opened_utc": "2026-11-02T14:33:15.939Z"
-  }
- ],
+ "positions": [],
  "trades": [
-  {
-   "coin": "HYPE",
-   "side": "sell",
-   "size": 1.22,
-   "pnl": -0.844904,
-   "fee": 0.049464,
-   "reason": "stop; EMA9/21 Long-Kreuz auf 5m + Trendfilter 1h-EMA50; SL 1.5 ATR / TP 2.5 ATR",
-   "id": "t-57",
-   "time_utc": "2026-10-30T20:24:26.826Z",
-   "action": "close",
-   "price": 90.098,
-   "notional": 109.91956,
-   "bot": "Execution Trader"
-  },
-  {
-   "coin": "HYPE",
-   "side": "buy",
-   "size": 0.0,
-   "pnl": 0.0,
-   "fee": 0.0,
-   "reason": "REJECT: session_window:no_entries_22:30-08:00_Berlin",
-   "id": "rej-58",
-   "time_utc": "2026-10-30T23:35:14.217Z",
-   "action": "open",
-   "price": 0.0,
-   "notional": 0.0,
-   "bot": "Risk Manager"
-  },
   {
    "coin": "NEAR",
    "side": "buy",
@@ -733,13 +691,37 @@
    "price": 94.476,
    "notional": 167.22252,
    "bot": "Execution Trader"
+  },
+  {
+   "coin": "SOL",
+   "side": "buy",
+   "size": 1.77,
+   "pnl": -0.718049,
+   "fee": 0.075539,
+   "reason": "stop; EMA9/21 Short-Kreuz auf 5m + Trendfilter 1h-EMA50; SL 1.5 ATR / TP 2.5 ATR",
+   "id": "t-107",
+   "time_utc": "2026-11-02T15:11:07.519Z",
+   "action": "close",
+   "price": 94.839,
+   "notional": 167.86503,
+   "bot": "Execution Trader"
+  },
+  {
+   "coin": "BTC",
+   "side": "buy",
+   "size": 0.0,
+   "pnl": 0.0,
+   "fee": 0.0,
+   "reason": "REJECT: cost-filter:target_1.0208<3x_roundtrip_0.3673",
+   "id": "rej-108",
+   "time_utc": "2026-11-02T15:11:14.335Z",
+   "action": "open",
+   "price": 0.0,
+   "notional": 0.0,
+   "bot": "Risk Manager"
   }
  ],
  "equity_curve": [
-  {
-   "t": "2026-11-01T17:24:53.637Z",
-   "equity": 88.874766
-  },
   {
    "t": "2026-11-01T17:25:54.949Z",
    "equity": 88.874766
@@ -1935,6 +1917,10 @@
   {
    "t": "2026-11-02T15:10:18.739Z",
    "equity": 89.362784
+  },
+  {
+   "t": "2026-11-02T15:11:24.918Z",
+   "equity": 88.311419
   }
  ],
  "note": "VIRTUELL – kein echtes Geld"
