@@ -3,12 +3,12 @@
  "mode": "paper",
  "label": "VIRTUELL – kein echtes Geld",
  "status": "running",
- "updated_utc": "2026-11-02T12:20:05.853Z",
+ "updated_utc": "2026-11-02T12:21:07.353Z",
  "start_equity": 100.0,
- "equity": 87.69874171615123,
+ "equity": 87.91749171615123,
  "cash": 57.90096671615124,
  "realized_pnl": -9.15250157962994,
- "unrealized_pnl": -0.2703749999999978,
+ "unrealized_pnl": -0.05162499999999781,
  "fees_paid": 5.627100698999999,
  "max_leverage": 10,
  "coins": [
@@ -24,30 +24,16 @@
    "side": "short",
    "size": 1.75,
    "entry": 85.909,
-   "mark": 86.0635,
+   "mark": 85.9385,
    "leverage": 5.0,
    "stop": 86.295114,
    "take_profit": 85.26547667,
-   "unrealized_pnl": -0.2703749999999978,
+   "unrealized_pnl": -0.05162499999999781,
    "margin": 30.068150000000003,
    "opened_utc": "2026-11-02T09:41:00.981Z"
   }
  ],
  "trades": [
-  {
-   "coin": "NEAR",
-   "side": "sell",
-   "size": 24.4,
-   "pnl": 0.0,
-   "fee": 0.04678,
-   "reason": "EMA9/21 Short-Kreuz auf 5m + Trendfilter 1h-EMA50; SL 1.5 ATR / TP 2.5 ATR | Strategist→Risk Manager→Execution Trader",
-   "id": "t-53",
-   "time_utc": "2026-10-30T19:20:36.787Z",
-   "action": "open",
-   "price": 4.2605,
-   "notional": 103.9562,
-   "bot": "Execution Trader"
-  },
   {
    "coin": "NEAR",
    "side": "buy",
@@ -733,13 +719,23 @@
    "price": 0.0,
    "notional": 0.0,
    "bot": "Risk Manager"
+  },
+  {
+   "coin": "BTC",
+   "side": "buy",
+   "size": 0.0,
+   "pnl": 0.0,
+   "fee": 0.0,
+   "reason": "REJECT: cost-filter:target_0.7305<3x_roundtrip_0.5967",
+   "id": "rej-103",
+   "time_utc": "2026-11-02T12:20:59.615Z",
+   "action": "open",
+   "price": 0.0,
+   "notional": 0.0,
+   "bot": "Risk Manager"
   }
  ],
  "equity_curve": [
-  {
-   "t": "2026-11-01T14:38:16.834Z",
-   "equity": 88.874766
-  },
   {
    "t": "2026-11-01T14:39:18.053Z",
    "equity": 88.874766
@@ -1935,6 +1931,10 @@
   {
    "t": "2026-11-02T12:20:05.853Z",
    "equity": 87.698742
+  },
+  {
+   "t": "2026-11-02T12:21:07.353Z",
+   "equity": 87.917492
   }
  ],
  "note": "VIRTUELL – kein echtes Geld"
