@@ -3,12 +3,12 @@
  "mode": "paper",
  "label": "VIRTUELL – kein echtes Geld",
  "status": "running",
- "updated_utc": "2026-11-02T11:37:57.315Z",
+ "updated_utc": "2026-11-02T11:38:56.724Z",
  "start_equity": 100.0,
- "equity": 88.01011323333876,
+ "equity": 87.93661323333875,
  "cash": 57.89908823333874,
  "realized_pnl": -9.15250157962994,
- "unrealized_pnl": 0.04287500000000577,
+ "unrealized_pnl": -0.030624999999997016,
  "fees_paid": 5.627100698999999,
  "max_leverage": 10,
  "coins": [
@@ -24,11 +24,11 @@
    "side": "short",
    "size": 1.75,
    "entry": 85.909,
-   "mark": 85.8845,
+   "mark": 85.9265,
    "leverage": 5.0,
    "stop": 86.295114,
    "take_profit": 85.26547667,
-   "unrealized_pnl": 0.04287500000000577,
+   "unrealized_pnl": -0.030624999999997016,
    "margin": 30.068150000000003,
    "opened_utc": "2026-11-02T09:41:00.981Z"
   }
@@ -736,10 +736,6 @@
   }
  ],
  "equity_curve": [
-  {
-   "t": "2026-11-01T13:37:42.987Z",
-   "equity": 89.68703
-  },
   {
    "t": "2026-11-01T13:38:42.422Z",
    "equity": 89.68898
@@ -1935,6 +1931,10 @@
   {
    "t": "2026-11-02T11:37:57.315Z",
    "equity": 88.010113
+  },
+  {
+   "t": "2026-11-02T11:38:56.724Z",
+   "equity": 87.936613
   }
  ],
  "note": "VIRTUELL – kein echtes Geld"
