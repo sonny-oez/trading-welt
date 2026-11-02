@@ -3,13 +3,13 @@
  "mode": "paper",
  "label": "VIRTUELL – kein echtes Geld",
  "status": "running",
- "updated_utc": "2026-11-02T11:28:25.201Z",
+ "updated_utc": "2026-11-02T11:37:57.315Z",
  "start_equity": 100.0,
- "equity": 88.9865763433388,
- "cash": 32.787916343338765,
- "realized_pnl": -8.369413469629922,
- "unrealized_pnl": 0.2362500000000214,
- "fees_paid": 5.568512588999999,
+ "equity": 88.01011323333876,
+ "cash": 57.89908823333874,
+ "realized_pnl": -9.15250157962994,
+ "unrealized_pnl": 0.04287500000000577,
+ "fees_paid": 5.627100698999999,
  "max_leverage": 10,
  "coins": [
   "BTC",
@@ -24,43 +24,16 @@
    "side": "short",
    "size": 1.75,
    "entry": 85.909,
-   "mark": 85.7605,
+   "mark": 85.8845,
    "leverage": 5.0,
    "stop": 86.295114,
    "take_profit": 85.26547667,
-   "unrealized_pnl": 0.2598750000000223,
+   "unrealized_pnl": 0.04287500000000577,
    "margin": 30.068150000000003,
    "opened_utc": "2026-11-02T09:41:00.981Z"
-  },
-  {
-   "coin": "NEAR",
-   "side": "short",
-   "size": 31.5,
-   "entry": 4.1102,
-   "mark": 4.11095,
-   "leverage": 5.0,
-   "stop": 4.13250178,
-   "take_profit": 4.07303037,
-   "unrealized_pnl": -0.023625000000000895,
-   "margin": 25.894259999999996,
-   "opened_utc": "2026-11-02T10:06:58.899Z"
   }
  ],
  "trades": [
-  {
-   "coin": "ETH",
-   "side": "sell",
-   "size": 0.0751,
-   "pnl": 0.0,
-   "fee": 0.075251,
-   "reason": "EMA9/21 Short-Kreuz auf 5m + Trendfilter 1h-EMA50; SL 1.5 ATR / TP 2.5 ATR | Strategist→Risk Manager→Execution Trader",
-   "id": "t-51",
-   "time_utc": "2026-10-30T18:32:10.029Z",
-   "action": "open",
-   "price": 2226.7,
-   "notional": 167.22517,
-   "bot": "Execution Trader"
-  },
   {
    "coin": "SOL",
    "side": "buy",
@@ -746,13 +719,23 @@
    "price": 4.1102,
    "notional": 129.4713,
    "bot": "Execution Trader"
+  },
+  {
+   "coin": "NEAR",
+   "side": "buy",
+   "size": 31.5,
+   "pnl": -0.783088,
+   "fee": 0.058588,
+   "reason": "stop; EMA9/21 Short-Kreuz auf 5m + Trendfilter 1h-EMA50; SL 1.5 ATR / TP 2.5 ATR",
+   "id": "t-101",
+   "time_utc": "2026-11-02T11:37:45.741Z",
+   "action": "close",
+   "price": 4.1332,
+   "notional": 130.1958,
+   "bot": "Execution Trader"
   }
  ],
  "equity_curve": [
-  {
-   "t": "2026-11-01T13:36:44.377Z",
-   "equity": 89.90153
-  },
   {
    "t": "2026-11-01T13:37:42.987Z",
    "equity": 89.68703
@@ -1948,6 +1931,10 @@
   {
    "t": "2026-11-02T11:28:25.200Z",
    "equity": 88.986576
+  },
+  {
+   "t": "2026-11-02T11:37:57.315Z",
+   "equity": 88.010113
   }
  ],
  "note": "VIRTUELL – kein echtes Geld"
