@@ -3,12 +3,12 @@
  "mode": "paper",
  "label": "VIRTUELL – kein echtes Geld",
  "status": "running",
- "updated_utc": "2026-11-03T08:19:52.373Z",
+ "updated_utc": "2026-11-03T08:20:56.328Z",
  "start_equity": 100.0,
- "equity": 86.18750387222825,
+ "equity": 86.28898387222824,
  "cash": 59.84595172022824,
  "realized_pnl": -11.011124763677941,
- "unrealized_pnl": 0.3974001520000076,
+ "unrealized_pnl": 0.49888015200000024,
  "fees_paid": 6.291870596999998,
  "max_leverage": 10,
  "coins": [
@@ -24,30 +24,16 @@
    "side": "short",
    "size": 34.4,
    "entry": 3.77095233,
-   "mark": 3.7594,
+   "mark": 3.75645,
    "leverage": 5.0,
    "stop": 3.79054763,
    "take_profit": 3.73829349,
-   "unrealized_pnl": 0.3974001520000076,
+   "unrealized_pnl": 0.49888015200000024,
    "margin": 25.944151999999995,
    "opened_utc": "2026-11-03T08:05:16.140Z"
   }
  ],
  "trades": [
-  {
-   "coin": "ETH",
-   "side": "buy",
-   "size": 0.0,
-   "pnl": 0.0,
-   "fee": 0.0,
-   "reason": "REJECT: cost-filter:target_0.6362<3x_roundtrip_0.7418",
-   "id": "rej-70",
-   "time_utc": "2026-10-31T19:35:47.407Z",
-   "action": "open",
-   "price": 0.0,
-   "notional": 0.0,
-   "bot": "Risk Manager"
-  },
   {
    "coin": "HYPE",
    "side": "buy",
@@ -733,13 +719,23 @@
    "price": 3.77095233,
    "notional": 129.72076,
    "bot": "Execution Trader"
+  },
+  {
+   "coin": "HYPE",
+   "side": "buy",
+   "size": 0.0,
+   "pnl": 0.0,
+   "fee": 0.0,
+   "reason": "REJECT: cost-filter:target_1.0074<3x_roundtrip_0.3460",
+   "id": "rej-120",
+   "time_utc": "2026-11-03T08:20:56.327Z",
+   "action": "open",
+   "price": 0.0,
+   "notional": 0.0,
+   "bot": "Risk Manager"
   }
  ],
  "equity_curve": [
-  {
-   "t": "2026-11-02T11:39:54.385Z",
-   "equity": 88.090613
-  },
   {
    "t": "2026-11-02T11:40:52.806Z",
    "equity": 87.964613
@@ -1935,6 +1931,10 @@
   {
    "t": "2026-11-03T08:19:52.373Z",
    "equity": 86.187504
+  },
+  {
+   "t": "2026-11-03T08:20:56.328Z",
+   "equity": 86.288984
   }
  ],
  "note": "VIRTUELL – kein echtes Geld"
