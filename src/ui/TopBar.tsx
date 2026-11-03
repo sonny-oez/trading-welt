@@ -31,7 +31,7 @@ function QuoteRun({ copy }: { copy: string }) {
   );
 }
 
-export function TopBar() {
+export function TopBar({ onOpenDashboard }: { onOpenDashboard: () => void }) {
   const status = useMarket((state) => state.status);
   const updatedAt = useMarket((state) => state.updatedAt);
   const notice = useMarket((state) => state.notice);
@@ -47,6 +47,9 @@ export function TopBar() {
           <span className="phase">{atmo.label}</span>
         </div>
         <div className="livebox">
+          <button type="button" className="view-toggle" onClick={onOpenDashboard} aria-label="Agenten-Tafel">
+            Agenten
+          </button>
           {status !== 'live' ? (
             <button type="button" className="retry" onClick={() => refreshNow()}>
               Erneut
