@@ -257,7 +257,7 @@ export function isDemoStale(updatedMs: number, now = Date.now()): boolean {
   return now - updatedMs > DEMO_STALE_MS;
 }
 
-export function newTradeIds(previous: ReadonlySet<string> | null, trades: Pick<DemoTrade, 'id'>[]): string[] {
+export function newTradeIds(previous: ReadonlySet<string> | null, trades: readonly Pick<DemoTrade, 'id'>[]): string[] {
   if (previous == null) return [];
   return trades.map((trade) => trade.id).filter((id) => !previous.has(id));
 }

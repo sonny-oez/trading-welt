@@ -42,6 +42,12 @@ Die App lädt zur Laufzeit
 mit Cache-Busting, etwa alle 60 Sekunden. Fehlt die Datei, erscheint „Demo startet gleich / noch keine Trades“.
 Ist `updated_utc` älter als 30 Minuten, erscheint „Simulation pausiert“.
 
+## Agenten-Tafel
+
+Die 3D-Welt bleibt die Startansicht. **Agenten** in der Kopfzeile oder `?view=dashboard` öffnet die Papier-Tafel:
+Kontostand, Rollen aus den Trade-Ereignissen, Aktivitätslog und Hinweise, sobald zwischen zwei Abrufen neue Zeilen in `state.json` stehen.
+Die Tafel liest nur diesen virtuellen Stand, etwa einmal pro Minute. „Papier“ und „Virtuell“ kennzeichnen das Konto. Ein Gewinnziel steht in den Daten nicht.
+
 ## Live
 
 Dieselbe Demo liest zusätzlich `public/demo/live.json` von
