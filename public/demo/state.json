@@ -3,7 +3,7 @@
  "mode": "paper",
  "label": "VIRTUELL – kein echtes Geld",
  "status": "running",
- "updated_utc": "2026-11-05T19:53:46.520Z",
+ "updated_utc": "2026-11-05T20:10:12.626Z",
  "start_equity": 100.0,
  "equity": 80.71757995837824,
  "cash": 80.71757995837824,
@@ -1919,7 +1919,7 @@
    "equity": 80.71758
   },
   {
-   "t": "2026-11-05T19:53:46.520Z",
+   "t": "2026-11-05T20:10:12.626Z",
    "equity": 80.71758
   }
  ],
