@@ -3,7 +3,7 @@
  "mode": "paper",
  "label": "VIRTUELL – kein echtes Geld",
  "status": "running",
- "updated_utc": "2026-11-06T17:43:02.451Z",
+ "updated_utc": "2026-11-06T17:48:41.229Z",
  "start_equity": 100.0,
  "equity": 73.80569350357827,
  "cash": 73.80569350357827,
@@ -20,34 +20,6 @@
  ],
  "positions": [],
  "trades": [
-  {
-   "coin": "BTC",
-   "side": "buy",
-   "size": 0.0,
-   "pnl": 0.0,
-   "fee": 0.0,
-   "reason": "REJECT: cost-filter:target_1.0111<3x_roundtrip_0.3715",
-   "id": "rej-109",
-   "time_utc": "2026-11-02T15:35:41.889Z",
-   "action": "open",
-   "price": 0.0,
-   "notional": 0.0,
-   "bot": "Risk Manager"
-  },
-  {
-   "coin": "BTC",
-   "side": "buy",
-   "size": 0.0,
-   "pnl": 0.0,
-   "fee": 0.0,
-   "reason": "REJECT: cost-filter:target_1.0102<3x_roundtrip_0.3745",
-   "id": "rej-110",
-   "time_utc": "2026-11-02T15:46:09.642Z",
-   "action": "open",
-   "price": 0.0,
-   "notional": 0.0,
-   "bot": "Risk Manager"
-  },
   {
    "coin": "ETH",
    "side": "buy",
@@ -719,13 +691,37 @@
    "price": 0.0,
    "notional": 0.0,
    "bot": "Risk Manager"
+  },
+  {
+   "coin": "BTC",
+   "side": "buy",
+   "size": 0.0,
+   "pnl": 0.0,
+   "fee": 0.0,
+   "reason": "REJECT: daily_loss_stop_active",
+   "id": "rej-159",
+   "time_utc": "2026-11-06T17:48:26.580Z",
+   "action": "open",
+   "price": 0.0,
+   "notional": 0.0,
+   "bot": "Risk Manager"
+  },
+  {
+   "coin": "HYPE",
+   "side": "buy",
+   "size": 0.0,
+   "pnl": 0.0,
+   "fee": 0.0,
+   "reason": "REJECT: daily_loss_stop_active",
+   "id": "rej-160",
+   "time_utc": "2026-11-06T17:48:38.346Z",
+   "action": "open",
+   "price": 0.0,
+   "notional": 0.0,
+   "bot": "Risk Manager"
   }
  ],
  "equity_curve": [
-  {
-   "t": "2026-11-06T11:34:55.489Z",
-   "equity": 77.382335
-  },
   {
    "t": "2026-11-06T11:35:56.966Z",
    "equity": 77.382335
@@ -1920,6 +1916,10 @@
   },
   {
    "t": "2026-11-06T17:43:02.451Z",
+   "equity": 73.805694
+  },
+  {
+   "t": "2026-11-06T17:48:41.229Z",
    "equity": 73.805694
   }
  ],
