@@ -3,12 +3,12 @@
  "mode": "paper",
  "label": "VIRTUELL – kein echtes Geld",
  "status": "running",
- "updated_utc": "2026-11-06T12:59:14.300Z",
+ "updated_utc": "2026-11-06T13:00:23.428Z",
  "start_equity": 100.0,
- "equity": 77.42434138657826,
- "cash": 58.58280530257827,
+ "equity": 77.57293082407828,
+ "cash": 58.583974740078276,
  "realized_pnl": -19.02828425197791,
- "unrealized_pnl": 0.08421008399999348,
+ "unrealized_pnl": 0.23163008399999682,
  "fees_paid": 7.181156295,
  "max_leverage": 10,
  "coins": [
@@ -24,44 +24,16 @@
    "side": "short",
    "size": 25.2,
    "entry": 3.72169167,
-   "mark": 3.71835,
+   "mark": 3.7125,
    "leverage": 5.0,
    "stop": 3.74710929,
    "take_profit": 3.67932896,
-   "unrealized_pnl": 0.08421008399999348,
+   "unrealized_pnl": 0.23163008399999682,
    "margin": 18.757326,
    "opened_utc": "2026-11-06T12:55:33.556Z"
   }
  ],
  "trades": [
-  {
-   "coin": "ETH",
-   "side": "buy",
-   "size": 0.0,
-   "pnl": 0.0,
-   "fee": 0.0,
-   "reason": "REJECT: cost-filter:target_0.6081<3x_roundtrip_0.7115",
-   "id": "rej-95",
-   "time_utc": "2026-11-01T17:39:39.882Z",
-   "action": "open",
-   "price": 0.0,
-   "notional": 0.0,
-   "bot": "Risk Manager"
-  },
-  {
-   "coin": "ETH",
-   "side": "buy",
-   "size": 0.0,
-   "pnl": 0.0,
-   "fee": 0.0,
-   "reason": "REJECT: cost-filter:target_0.7393<3x_roundtrip_0.6046",
-   "id": "rej-96",
-   "time_utc": "2026-11-01T20:50:41.382Z",
-   "action": "open",
-   "price": 0.0,
-   "notional": 0.0,
-   "bot": "Risk Manager"
-  },
   {
    "coin": "HYPE",
    "side": "buy",
@@ -733,13 +705,37 @@
    "price": 3.72169167,
    "notional": 93.78663,
    "bot": "Execution Trader"
+  },
+  {
+   "coin": "BTC",
+   "side": "buy",
+   "size": 0.0,
+   "pnl": 0.0,
+   "fee": 0.0,
+   "reason": "REJECT: cost-filter:target_0.7537<3x_roundtrip_0.4371",
+   "id": "rej-145",
+   "time_utc": "2026-11-06T13:00:10.028Z",
+   "action": "open",
+   "price": 0.0,
+   "notional": 0.0,
+   "bot": "Risk Manager"
+  },
+  {
+   "coin": "ETH",
+   "side": "buy",
+   "size": 0.0,
+   "pnl": 0.0,
+   "fee": 0.0,
+   "reason": "REJECT: cost-filter:target_0.8184<3x_roundtrip_0.3842",
+   "id": "rej-146",
+   "time_utc": "2026-11-06T13:00:17.922Z",
+   "action": "open",
+   "price": 0.0,
+   "notional": 0.0,
+   "bot": "Risk Manager"
   }
  ],
  "equity_curve": [
-  {
-   "t": "2026-11-06T07:38:52.204Z",
-   "equity": 78.268601
-  },
   {
    "t": "2026-11-06T07:39:51.774Z",
    "equity": 78.148251
@@ -1935,6 +1931,10 @@
   {
    "t": "2026-11-06T12:59:14.300Z",
    "equity": 77.424341
+  },
+  {
+   "t": "2026-11-06T13:00:23.428Z",
+   "equity": 77.572931
   }
  ],
  "note": "VIRTUELL – kein echtes Geld"
