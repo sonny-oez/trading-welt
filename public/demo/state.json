@@ -3,7 +3,7 @@
  "mode": "paper",
  "label": "VIRTUELL – kein echtes Geld",
  "status": "running",
- "updated_utc": "2026-11-06T07:40:53.911Z",
+ "updated_utc": "2026-11-06T07:41:51.651Z",
  "start_equity": 100.0,
  "equity": 77.38233528607827,
  "cash": 77.38233528607827,
@@ -722,10 +722,6 @@
   }
  ],
  "equity_curve": [
-  {
-   "t": "2026-11-03T13:26:50.372Z",
-   "equity": 84.446394
-  },
   {
    "t": "2026-11-03T13:27:48.740Z",
    "equity": 84.764894
@@ -1921,6 +1917,10 @@
   {
    "t": "2026-11-06T07:40:50.570Z",
    "equity": 77.754001
+  },
+  {
+   "t": "2026-11-06T07:41:51.651Z",
+   "equity": 77.382335
   }
  ],
  "note": "VIRTUELL – kein echtes Geld"
