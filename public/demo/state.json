@@ -3,7 +3,7 @@
  "mode": "paper",
  "label": "VIRTUELL – kein echtes Geld",
  "status": "running",
- "updated_utc": "2026-11-06T11:14:13.204Z",
+ "updated_utc": "2026-11-06T11:15:23.551Z",
  "start_equity": 100.0,
  "equity": 77.38233528607827,
  "cash": 77.38233528607827,
@@ -20,34 +20,6 @@
  ],
  "positions": [],
  "trades": [
-  {
-   "coin": "HYPE",
-   "side": "buy",
-   "size": 0.0,
-   "pnl": 0.0,
-   "fee": 0.0,
-   "reason": "REJECT: cost-filter:target_1.0045<3x_roundtrip_0.3817",
-   "id": "rej-91",
-   "time_utc": "2026-11-01T14:51:19.382Z",
-   "action": "open",
-   "price": 0.0,
-   "notional": 0.0,
-   "bot": "Risk Manager"
-  },
-  {
-   "coin": "SOL",
-   "side": "buy",
-   "size": 0.0,
-   "pnl": 0.0,
-   "fee": 0.0,
-   "reason": "REJECT: cost-filter:target_0.9003<3x_roundtrip_0.4682",
-   "id": "rej-92",
-   "time_utc": "2026-11-01T15:37:30.690Z",
-   "action": "open",
-   "price": 0.0,
-   "notional": 0.0,
-   "bot": "Risk Manager"
-  },
   {
    "coin": "BTC",
    "side": "buy",
@@ -719,13 +691,37 @@
    "price": 0.0,
    "notional": 0.0,
    "bot": "Risk Manager"
+  },
+  {
+   "coin": "ETH",
+   "side": "buy",
+   "size": 0.0,
+   "pnl": 0.0,
+   "fee": 0.0,
+   "reason": "REJECT: cost-filter:target_0.8069<3x_roundtrip_0.3919",
+   "id": "rej-141",
+   "time_utc": "2026-11-06T11:15:10.835Z",
+   "action": "open",
+   "price": 0.0,
+   "notional": 0.0,
+   "bot": "Risk Manager"
+  },
+  {
+   "coin": "SOL",
+   "side": "buy",
+   "size": 0.0,
+   "pnl": 0.0,
+   "fee": 0.0,
+   "reason": "REJECT: cost-filter:target_0.8346<3x_roundtrip_0.3669",
+   "id": "rej-142",
+   "time_utc": "2026-11-06T11:15:17.477Z",
+   "action": "open",
+   "price": 0.0,
+   "notional": 0.0,
+   "bot": "Risk Manager"
   }
  ],
  "equity_curve": [
-  {
-   "t": "2026-11-05T19:29:38.989Z",
-   "equity": 80.71758
-  },
   {
    "t": "2026-11-05T19:30:39.512Z",
    "equity": 80.71758
@@ -1920,6 +1916,10 @@
   },
   {
    "t": "2026-11-06T11:14:13.204Z",
+   "equity": 77.382335
+  },
+  {
+   "t": "2026-11-06T11:15:23.551Z",
    "equity": 77.382335
   }
  ],
