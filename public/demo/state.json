@@ -3,12 +3,12 @@
  "mode": "paper",
  "label": "VIRTUELL – kein echtes Geld",
  "status": "running",
- "updated_utc": "2026-11-07T15:14:22.621Z",
+ "updated_utc": "2026-11-07T15:15:26.088Z",
  "start_equity": 100.0,
- "equity": 73.84733230357827,
+ "equity": 73.83333230357827,
  "cash": 47.92038230357827,
  "realized_pnl": -22.50945733297792,
- "unrealized_pnl": 0.09975000000000067,
+ "unrealized_pnl": 0.08575000000000221,
  "fees_paid": 7.397388728999999,
  "max_leverage": 10,
  "coins": [
@@ -24,30 +24,16 @@
    "side": "short",
    "size": 35.0,
    "entry": 3.6896,
-   "mark": 3.68675,
+   "mark": 3.68715,
    "leverage": 5.0,
    "stop": 3.7054556,
    "take_profit": 3.663174,
-   "unrealized_pnl": 0.09975000000000067,
+   "unrealized_pnl": 0.08575000000000221,
    "margin": 25.827199999999998,
    "opened_utc": "2026-11-07T15:09:27.203Z"
   }
  ],
  "trades": [
-  {
-   "coin": "HYPE",
-   "side": "sell",
-   "size": 1.22,
-   "pnl": 0.0,
-   "fee": 0.042689,
-   "reason": "EMA9/21 Short-Kreuz auf 5m + Trendfilter 1h-EMA50; SL 1.5 ATR / TP 2.5 ATR | Strategist→Risk Manager→Execution Trader",
-   "id": "t-134",
-   "time_utc": "2026-11-05T21:10:19.373Z",
-   "action": "open",
-   "price": 77.75722951,
-   "notional": 94.86382,
-   "bot": "Execution Trader"
-  },
   {
    "coin": "HYPE",
    "side": "buy",
@@ -733,13 +719,23 @@
    "price": 0.0,
    "notional": 0.0,
    "bot": "Risk Manager"
+  },
+  {
+   "coin": "ETH",
+   "side": "buy",
+   "size": 0.0,
+   "pnl": 0.0,
+   "fee": 0.0,
+   "reason": "REJECT: risk_above_1pct:0.7384>0.7383",
+   "id": "rej-184",
+   "time_utc": "2026-11-07T15:15:20.330Z",
+   "action": "open",
+   "price": 0.0,
+   "notional": 0.0,
+   "bot": "Risk Manager"
   }
  ],
  "equity_curve": [
-  {
-   "t": "2026-11-06T19:50:25.187Z",
-   "equity": 73.805694
-  },
   {
    "t": "2026-11-06T19:51:26.787Z",
    "equity": 73.805694
@@ -1935,6 +1931,10 @@
   {
    "t": "2026-11-07T15:14:22.621Z",
    "equity": 73.847332
+  },
+  {
+   "t": "2026-11-07T15:15:26.088Z",
+   "equity": 73.833332
   }
  ],
  "note": "VIRTUELL – kein echtes Geld"
