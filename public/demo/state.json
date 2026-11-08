@@ -3,7 +3,7 @@
  "mode": "paper",
  "label": "VIRTUELL – kein echtes Geld",
  "status": "running",
- "updated_utc": "2026-11-08T10:18:39.307Z",
+ "updated_utc": "2026-11-08T10:19:44.604Z",
  "start_equity": 100.0,
  "equity": 74.63489635357827,
  "cash": 74.63489635357827,
@@ -20,20 +20,6 @@
  ],
  "positions": [],
  "trades": [
-  {
-   "coin": "BTC",
-   "side": "buy",
-   "size": 0.0,
-   "pnl": 0.0,
-   "fee": 0.0,
-   "reason": "REJECT: cost-filter:target_0.7522<3x_roundtrip_0.4339",
-   "id": "rej-143",
-   "time_utc": "2026-11-06T11:20:27.000Z",
-   "action": "open",
-   "price": 0.0,
-   "notional": 0.0,
-   "bot": "Risk Manager"
-  },
   {
    "coin": "NEAR",
    "side": "sell",
@@ -719,13 +705,23 @@
    "price": 0.0,
    "notional": 0.0,
    "bot": "Risk Manager"
+  },
+  {
+   "coin": "BTC",
+   "side": "buy",
+   "size": 0.0,
+   "pnl": 0.0,
+   "fee": 0.0,
+   "reason": "REJECT: cost-filter:target_0.3155<3x_roundtrip_0.7538",
+   "id": "rej-193",
+   "time_utc": "2026-11-08T10:19:33.504Z",
+   "action": "open",
+   "price": 0.0,
+   "notional": 0.0,
+   "bot": "Risk Manager"
   }
  ],
  "equity_curve": [
-  {
-   "t": "2026-11-07T09:27:50.748Z",
-   "equity": 73.805694
-  },
   {
    "t": "2026-11-07T09:32:57.810Z",
    "equity": 73.805694
@@ -1920,6 +1916,10 @@
   },
   {
    "t": "2026-11-08T10:18:39.307Z",
+   "equity": 74.634896
+  },
+  {
+   "t": "2026-11-08T10:19:44.604Z",
    "equity": 74.634896
   }
  ],
