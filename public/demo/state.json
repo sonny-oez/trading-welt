@@ -3,7 +3,7 @@
  "mode": "paper",
  "label": "VIRTUELL – kein echtes Geld",
  "status": "running",
- "updated_utc": "2026-11-08T09:03:54.508Z",
+ "updated_utc": "2026-11-08T09:22:13.290Z",
  "start_equity": 100.0,
  "equity": 74.63489635357827,
  "cash": 74.63489635357827,
@@ -20,34 +20,6 @@
  ],
  "positions": [],
  "trades": [
-  {
-   "coin": "BTC",
-   "side": "buy",
-   "size": 0.0,
-   "pnl": 0.0,
-   "fee": 0.0,
-   "reason": "REJECT: cost-filter:target_0.8386<3x_roundtrip_0.3650",
-   "id": "rej-140",
-   "time_utc": "2026-11-06T08:10:05.012Z",
-   "action": "open",
-   "price": 0.0,
-   "notional": 0.0,
-   "bot": "Risk Manager"
-  },
-  {
-   "coin": "ETH",
-   "side": "buy",
-   "size": 0.0,
-   "pnl": 0.0,
-   "fee": 0.0,
-   "reason": "REJECT: cost-filter:target_0.8069<3x_roundtrip_0.3919",
-   "id": "rej-141",
-   "time_utc": "2026-11-06T11:15:10.835Z",
-   "action": "open",
-   "price": 0.0,
-   "notional": 0.0,
-   "bot": "Risk Manager"
-  },
   {
    "coin": "SOL",
    "side": "buy",
@@ -719,13 +691,37 @@
    "price": 0.0,
    "notional": 0.0,
    "bot": "Risk Manager"
+  },
+  {
+   "coin": "ETH",
+   "side": "buy",
+   "size": 0.0,
+   "pnl": 0.0,
+   "fee": 0.0,
+   "reason": "REJECT: cost-filter:target_0.4172<3x_roundtrip_0.6721",
+   "id": "rej-190",
+   "time_utc": "2026-11-08T09:22:01.484Z",
+   "action": "open",
+   "price": 0.0,
+   "notional": 0.0,
+   "bot": "Risk Manager"
+  },
+  {
+   "coin": "SOL",
+   "side": "buy",
+   "size": 0.0,
+   "pnl": 0.0,
+   "fee": 0.0,
+   "reason": "REJECT: cost-filter:target_0.5908<3x_roundtrip_0.5310",
+   "id": "rej-191",
+   "time_utc": "2026-11-08T09:22:08.131Z",
+   "action": "open",
+   "price": 0.0,
+   "notional": 0.0,
+   "bot": "Risk Manager"
   }
  ],
  "equity_curve": [
-  {
-   "t": "2026-11-07T09:07:57.387Z",
-   "equity": 73.805694
-  },
   {
    "t": "2026-11-07T09:08:58.521Z",
    "equity": 73.805694
@@ -1920,6 +1916,10 @@
   },
   {
    "t": "2026-11-08T09:03:54.508Z",
+   "equity": 74.634896
+  },
+  {
+   "t": "2026-11-08T09:22:13.290Z",
    "equity": 74.634896
   }
  ],
